@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Placar Provável</title>
+<meta name="description" content="Probabilidades de um modelo estatístico de gols para jogos do Brasileirão, com histórico público de acertos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="estilo.css">
+<style>body{margin:0}</style>
+</head>
+<body>
+<div id="app"><div class="wrap"><p class="muted">Carregando previsões…</p></div></div>
+<script src="comum.js"></script>
+<script>
+fetch("dados/jogos.json", {cache: "no-store"}).then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(render)
+  .catch(function(){ document.getElementById("app").innerHTML = '<div class="wrap"><p>Não foi possível carregar as previsões agora. Tente recarregar a página.</p></div>'; });
+
+function render(state){
+  var pend = state.jogos.filter(function(j){ return !jogado(j); }).sort(function(a, b){ return ordData(a, b, 1); });
+  var feitos = state.jogos.filter(jogado).sort(function(a, b){ return ordData(a, b, -1); });
+  var acertos = feitos.filter(function(j){ return fav(j) === res(j); }).length;
+  var br = feitos.length ? feitos.reduce(function(s, j){ return s + brier(j); }, 0) / feitos.length : null;
+  var o25 = feitos.filter(function(j){ return (j.o25 >= 0.5) === (j.gc + j.gf > 2); }).length;
+
+  var h = '<div class="wrap">' +
+    '<header><span class="eyebrow">Modelo de gols · Brasileirão' + (state.atualizado ? ' · atualizado em ' + dataBR(state.atualizado) : '') + '</span><h1>Placar Provável</h1>' +
+    '<p class="muted">Probabilidades calculadas por um modelo estatístico de gols, sem palpite pago e sem ligação com casas de aposta. Cada previsão é registrada antes do jogo e o resultado entra no placar de desempenho abaixo, acerte ou erre.</p></header>';
+
+  h += '<section><h2>Desempenho até aqui</h2><div class="stats">' +
+    '<div class="stat"><b>' + feitos.length + '</b><span>jogos avaliados</span></div>' +
+    '<div class="stat"><b>' + (feitos.length ? Math.round(acertos / feitos.length * 100) + '%' : '—') + '</b><span>favorito do modelo venceu (' + acertos + ' de ' + feitos.length + ')</span></div>' +
+    '<div class="stat"><b>' + (br === null ? '—' : br.toFixed(3).replace(".", ",")) + '</b><span>Brier score (menor é melhor)</span></div>' +
+    '<div class="stat"><b>' + (feitos.length ? Math.round(o25 / feitos.length * 100) + '%' : '—') + '</b><span>acerto em mais/menos de 2,5</span></div>' +
+    '</div><p class="muted" style="font-size:.88rem">Com poucos jogos, esses números oscilam muito. No teste com 2.280 jogos da Série A de 2019 a 2024, o favorito do modelo venceu em 48,7% das vezes, contra 46,2% de apostar sempre no mandante.</p></section>';
+
+  h += '<section><h2>Próximos jogos</h2>' + (pend.length ? '<div class="games">' + pend.map(function(j){ return cartao(j); }).join("") + '</div>' :
+    '<div class="empty">Nenhuma previsão aberta no momento. As próximas aparecem aqui antes de cada rodada.</div>') + '</section>';
+
+  h += '<section><h2>Resultados</h2>' + (feitos.length ? '<div class="tablewrap"><table><thead><tr><th>Data</th><th>Jogo</th><th class="c">Placar</th><th>Favorito do modelo</th><th class="c">Casa · Emp · Fora</th><th class="c"></th></tr></thead><tbody>' +
+    feitos.map(function(j){ var ok = fav(j) === res(j);
+      return '<tr><td>' + dataBR(j.data) + '</td><td>' + esc(j.casa) + ' × ' + esc(j.fora) + '</td><td class="c"><b>' + j.gc + ' – ' + j.gf + '</b></td><td>' + esc(nomeFav(j)) + ' (' + pct(Math.max(j.p1, j.px, j.p2)) + ')</td><td class="c">' + pct(j.p1) + ' · ' + pct(j.px) + ' · ' + pct(j.p2) + '</td><td class="c"><span class="pill ' + (ok ? 'ok">acertou' : 'bad">errou') + '</span></td></tr>'; }).join("") +
+    '</tbody></table></div>' : '<div class="empty">Os resultados aparecem aqui depois de cada jogo.</div>') + '</section>';
+
+  h += '<section><h2>Como funciona</h2><ul>' +
+    '<li>Para cada time, o modelo mede a força de ataque e de defesa comparando gols marcados e sofridos com a média da liga, na campanha geral e na campanha em casa ou fora.</li>' +
+    '<li>Com isso, estima os gols esperados de cada lado e calcula a chance de cada placar pela distribuição de Poisson, com um ajuste para placares baixos (Dixon-Coles).</li>' +
+    '<li>As probabilidades de vitória, empate, mais de 2,5 gols e ambas marcam saem da soma desses placares.</li>' +
+    '<li>Uma probabilidade de 60% significa que, em jogos parecidos, o favorito perde ou empata cerca de 4 vezes em 10. Não existe resultado garantido.</li>' +
+    '</ul></section>';
+
+  h += '<p class="aviso">Conteúdo estatístico e informativo, não é recomendação de aposta. Apostas são proibidas para menores de 18 anos. Se for apostar, faça isso com responsabilidade e só com dinheiro que você pode perder.</p></div>';
+  document.getElementById("app").innerHTML = h;
+}
+</script>
+</body>
+</html>

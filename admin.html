@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Placar Provável · Administração</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="estilo.css">
+<style>body{margin:0} .passos{counter-reset:p} .passos li{margin-bottom:4px}</style>
+</head>
+<body>
+<div class="wrap">
+  <header><span class="eyebrow">Uso interno</span><h1>Administração</h1>
+  <p class="muted">Esta página não altera o site sozinha. Ela monta o arquivo <code>dados/jogos.json</code> atualizado; o site muda quando você sobe esse arquivo no GitHub.</p></header>
+
+  <section class="admin">
+    <h3>1. Adicionar jogo</h3>
+    <textarea id="colar" placeholder="Cole aqui o texto da página do jogo"></textarea>
+    <div class="row"><button class="ghost" id="btn-ler">Ler página</button></div>
+    <div id="form" hidden>
+      <div class="grid" id="campos"></div>
+      <div class="row" style="margin-top:10px"><button id="btn-add">Adicionar jogo</button><button class="ghost" id="btn-desc">Descartar</button></div>
+    </div>
+    <p class="msg" id="msg"></p>
+  </section>
+
+  <section>
+    <h2>2. Jogos sem placar</h2>
+    <div id="pendentes" class="games"></div>
+  </section>
+
+  <section>
+    <h2>3. Resultados registrados</h2>
+    <div id="feitos"></div>
+  </section>
+
+  <section class="admin">
+    <h3>4. Publicar</h3>
+    <ol class="passos">
+      <li>Clique em <b>Copiar JSON</b> (ou baixe o arquivo).</li>
+      <li>No GitHub, abra <code>dados/jogos.json</code> no repositório, clique no lápis (Edit), apague tudo e cole.</li>
+      <li>Clique em <b>Commit changes</b>. O site atualiza em 1 ou 2 minutos.</li>
+    </ol>
+    <div class="row"><button id="btn-copiar">Copiar JSON</button><button class="ghost" id="btn-baixar">Baixar jogos.json</button><span class="msg" id="msg2"></span></div>
+    <textarea id="saida" readonly aria-label="JSON atualizado"></textarea>
+  </section>
+</div>
+
+<script src="modelo.js"></script>
+<script src="comum.js"></script>
+<script>
+var state = {jogos: []}, rascunho = null;
+var CAMPOS = [["data","Data (AAAA-MM-DD)"],["liga","Liga"],["casa","Mandante"],["fora","Visitante"],["lgH","Gols/jogo mandantes da liga"],["lgA","Gols/jogo visitantes da liga"],
+  ["cMarc","Mandante: marca (geral)"],["cSof","Mandante: sofre (geral)"],["cMarcCasa","Mandante: marca em casa"],["cSofCasa","Mandante: sofre em casa"],
+  ["fMarc","Visitante: marca (geral)"],["fSof","Visitante: sofre (geral)"],["fMarcFora","Visitante: marca fora"],["fSofFora","Visitante: sofre fora"]];
+var $ = function(id){ return document.getElementById(id); };
+function msg(t, erro){ $("msg").textContent = t; $("msg").className = "msg" + (erro ? " err" : ""); }
+
+fetch("dados/jogos.json", {cache: "no-store"}).then(function(r){ return r.json(); })
+  .then(function(d){ state = d; render(); })
+  .catch(function(){ msg("Não carregou dados/jogos.json. Abra esta página pelo endereço do GitHub Pages.", true); render(); });
+
+function render(){
+  state.atualizado = new Date().toISOString().slice(0, 10);
+  var pend = state.jogos.filter(function(j){ return !jogado(j); }).sort(function(a, b){ return ordData(a, b, 1); });
+  var feitos = state.jogos.filter(jogado).sort(function(a, b){ return ordData(a, b, -1); });
+  $("pendentes").innerHTML = pend.length ? pend.map(function(j){
+    return cartao(j, '<div class="score"><span class="muted">Placar:</span><input id="gc-' + j.id + '" type="number" min="0" aria-label="Gols ' + esc(j.casa) + '"><span>×</span><input id="gf-' + j.id + '" type="number" min="0" aria-label="Gols ' + esc(j.fora) + '">' +
+      '<button class="ghost" data-acao="placar" data-id="' + j.id + '">Registrar placar</button><button class="danger" data-acao="remover" data-id="' + j.id + '">Remover</button></div>');
+  }).join("") : '<div class="empty">Nenhum jogo aguardando placar.</div>';
+  $("feitos").innerHTML = feitos.length ? '<div class="tablewrap"><table><thead><tr><th>Data</th><th>Jogo</th><th class="c">Placar</th><th class="c">Casa · Emp · Fora</th><th></th></tr></thead><tbody>' +
+    feitos.map(function(j){ return '<tr><td>' + dataBR(j.data) + '</td><td>' + esc(j.casa) + ' × ' + esc(j.fora) + '</td><td class="c">' + j.gc + ' – ' + j.gf + '</td><td class="c">' + pct(j.p1) + ' · ' + pct(j.px) + ' · ' + pct(j.p2) + '</td><td><button class="danger" data-acao="remover" data-id="' + j.id + '">Remover</button></td></tr>'; }).join("") +
+    '</tbody></table></div>' : '<div class="empty">Nenhum resultado ainda.</div>';
+  $("saida").value = JSON.stringify(state, null, 1) + "\n";
+}
+
+$("btn-ler").addEventListener("click", function(){
+  var r = ler($("colar").value); rascunho = r.dados;
+  $("campos").innerHTML = CAMPOS.map(function(c){ return '<label for="f-' + c[0] + '">' + c[1] + '<input id="f-' + c[0] + '" value="' + esc(rascunho[c[0]] == null ? "" : rascunho[c[0]]) + '"></label>'; }).join("");
+  $("form").hidden = false;
+  msg(r.faltando.length ? "Faltou encontrar: " + r.faltando.join(", ") + ". Preencha à mão." : "Página lida. Confira os números e adicione.", r.faltando.length > 0);
+});
+$("btn-desc").addEventListener("click", function(){ $("form").hidden = true; rascunho = null; msg(""); });
+$("btn-add").addEventListener("click", function(){
+  var o = {}, num = ["lgH","lgA","cMarc","cSof","cMarcCasa","cSofCasa","fMarc","fSof","fMarcFora","fSofFora"];
+  CAMPOS.forEach(function(c){ o[c[0]] = $("f-" + c[0]).value.trim(); });
+  var falta = num.filter(function(k){ o[k] = parseFloat(String(o[k]).replace(",", ".")); return !(o[k] > 0); });
+  if (!o.casa || !o.fora) falta.push("times");
+  if (falta.length){ msg("Faltou preencher: " + falta.join(", ") + ".", true); return; }
+  state.jogos.push(Object.assign({id: "j" + Date.now().toString(36), data: o.data, liga: o.liga, casa: o.casa, fora: o.fora, gc: null, gf: null}, prever(o)));
+  $("form").hidden = true; $("colar").value = ""; rascunho = null;
+  msg(o.casa + " × " + o.fora + " adicionado. Depois de terminar, publique no passo 4.");
+  render();
+});
+document.addEventListener("click", function(ev){
+  var b = ev.target.closest("button[data-acao]"); if (!b) return;
+  var id = b.dataset.id;
+  if (b.dataset.acao === "placar"){
+    var gc = $("gc-" + id).value, gf = $("gf-" + id).value;
+    if (gc === "" || gf === ""){ msg("Preencha os gols dos dois times.", true); return; }
+    var j = state.jogos.find(function(x){ return x.id === id; }); j.gc = parseInt(gc, 10); j.gf = parseInt(gf, 10);
+    msg("Placar registrado: " + j.casa + " " + j.gc + " × " + j.gf + " " + j.fora + ".");
+  } else if (b.dataset.acao === "remover"){
+    if (b.dataset.confirmar !== "1"){ b.dataset.confirmar = "1"; b.textContent = "Confirmar remoção"; return; }
+    state.jogos = state.jogos.filter(function(x){ return x.id !== id; }); msg("Jogo removido.");
+  }
+  render();
+});
+$("btn-copiar").addEventListener("click", function(){
+  var t = $("saida").value;
+  navigator.clipboard.writeText(t).then(function(){ $("msg2").textContent = "Copiado."; })
+    .catch(function(){ $("saida").select(); $("msg2").textContent = "Texto selecionado. Use Ctrl+C."; });
+});
+$("btn-baixar").addEventListener("click", function(){
+  var a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([$("saida").value], {type: "application/json"}));
+  a.download = "jogos.json"; document.body.appendChild(a); a.click(); a.remove();
+});
+</script>
+</body>
+</html>
