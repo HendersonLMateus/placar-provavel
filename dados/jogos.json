@@ -1,0 +1,10 @@
+{
+ "jogos": [
+  {"id": "j1", "data": "", "liga": "Serie A", "casa": "Atletico MG", "fora": "Coritiba PR", "xgc": 1.99, "xgf": 1.07, "p1": 0.5829, "px": 0.2242, "p2": 0.1929, "o25": 0.5894, "bts": 0.5711, "gc": 1, "gf": 0},
+  {"id": "j2", "data": "2026-10-17", "liga": "Serie A", "casa": "Atletico PR", "fora": "Palmeiras SP", "xgc": 0.98, "xgf": 1.25, "p1": 0.2821, "px": 0.2985, "p2": 0.4194, "o25": 0.3855, "bts": 0.4522, "gc": 0, "gf": 2},
+  {"id": "j3", "data": "2026-10-17", "liga": "Serie A", "casa": "Botafogo RJ", "fora": "Chapecoense SC", "xgc": 2.3, "xgf": 0.99, "p1": 0.6626, "px": 0.193, "p2": 0.1444, "o25": 0.6397, "bts": 0.571, "gc": 1, "gf": 0},
+  {"id": "j4", "data": "2026-10-17", "liga": "Serie A", "casa": "Mirassol SP", "fora": "Internacional RS", "xgc": 1.25, "xgf": 1.13, "p1": 0.385, "px": 0.2904, "p2": 0.3245, "o25": 0.4248, "bts": 0.4893, "gc": 2, "gf": 0},
+  {"id": "j5", "data": "2026-10-18", "liga": "Serie A", "casa": "Bahia BA", "fora": "Flamengo RJ", "xgc": 1.02, "xgf": 1.53, "p1": 0.2477, "px": 0.2689, "p2": 0.4834, "o25": 0.4695, "bts": 0.5079, "gc": 0, "gf": 3}
+ ],
+ "atualizado": "2026-10-19"
+}
