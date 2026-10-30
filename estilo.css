@@ -119,3 +119,10 @@ a:focus-visible{outline:2px solid var(--c2);outline-offset:2px}
 .grade-times .info:empty{display:none}
 @media (prefers-reduced-motion: reduce){.grade-times a{transition:none}}
 .grade-times li{display:flex}.grade-times a{flex:1}
+.grupo-rodada{display:flex;flex-direction:column;gap:10px}
+.grupo-rodada+.grupo-rodada{margin-top:18px}
+.grupo-topo{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.grupo-rodada h3{font-size:1.3rem}
+.grupo-rodada h3 a{color:var(--fg);text-decoration:none}
+.grupo-rodada h3 a:hover{color:var(--c1)}
+.ver-rodada{font-size:.9rem}
