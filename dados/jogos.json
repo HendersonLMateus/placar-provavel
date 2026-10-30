@@ -97,38 +97,6 @@
    "bts": 0.6277
   },
   {
-   "id": "jmvvfy397",
-   "data": "2026-10-30",
-   "liga": "Serie A",
-   "casa": "Corinthians SP",
-   "fora": "Mirassol SP",
-   "gc": null,
-   "gf": null,
-   "xgc": 1.15,
-   "xgf": 0.89,
-   "p1": 0.4081,
-   "px": 0.3148,
-   "p2": 0.2771,
-   "o25": 0.3341,
-   "bts": 0.4097
-  },
-  {
-   "id": "jmvvfypey",
-   "data": "2026-10-31",
-   "liga": "Serie A",
-   "casa": "Coritiba PR",
-   "fora": "Vitoria BA",
-   "gc": null,
-   "gf": null,
-   "xgc": 1.58,
-   "xgf": 0.98,
-   "p1": 0.5085,
-   "px": 0.2638,
-   "p2": 0.2277,
-   "o25": 0.4716,
-   "bts": 0.5017
-  },
-  {
    "id": "jmvvg74wj",
    "data": "2026-10-18",
    "liga": "Serie A",
@@ -479,6 +447,346 @@
    "p2": 0.4204,
    "o25": 0.5347,
    "bts": 0.5736
+  },
+  {
+   "id": "jmvvjv8rb",
+   "data": "2026-10-30",
+   "liga": "Serie A",
+   "casa": "Corinthians SP",
+   "fora": "Mirassol SP",
+   "gc": null,
+   "gf": null,
+   "xgc": 1.15,
+   "xgf": 0.89,
+   "p1": 0.4081,
+   "px": 0.3148,
+   "p2": 0.2771,
+   "o25": 0.3341,
+   "bts": 0.4097,
+   "hora": "20:00",
+   "rodada": 33,
+   "ctx": {
+    "tc": {
+     "pos": 18,
+     "pts": 33,
+     "j": 32
+    },
+    "tf": {
+     "pos": 15,
+     "pts": 37,
+     "j": 32
+    },
+    "ref": {
+     "lider": 70,
+     "g4": 54,
+     "g6": 53,
+     "z4": 34,
+     "n": 20
+    },
+    "h2h": [
+     {
+      "d": "2026-05-04",
+      "c": "Mirassol SP",
+      "f": "Corinthians SP",
+      "gc": 2,
+      "gf": 1
+     },
+     {
+      "d": "2025-10-05",
+      "c": "Corinthians SP",
+      "f": "Mirassol SP",
+      "gc": 3,
+      "gf": 0
+     },
+     {
+      "d": "2025-05-10",
+      "c": "Mirassol SP",
+      "f": "Corinthians SP",
+      "gc": 2,
+      "gf": 1
+     },
+     {
+      "d": "2025-03-02",
+      "c": "Corinthians SP",
+      "f": "Mirassol SP",
+      "gc": 2,
+      "gf": 0
+     },
+     {
+      "d": "2023-02-19",
+      "c": "Corinthians SP",
+      "f": "Mirassol SP",
+      "gc": 3,
+      "gf": 0
+     }
+    ],
+    "uc": [
+     {
+      "d": "2026-10-24",
+      "adv": "Vasco da Gama RJ",
+      "m": "f",
+      "gp": 2,
+      "gs": 3,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-20",
+      "adv": "Vitoria BA",
+      "m": "c",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-11",
+      "adv": "Palmeiras SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 4,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-07",
+      "adv": "Internacional RS",
+      "m": "f",
+      "gp": 1,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-09-20",
+      "adv": "Fluminense RJ",
+      "m": "c",
+      "gp": 1,
+      "gs": 3,
+      "r": "D"
+     }
+    ],
+    "uf": [
+     {
+      "d": "2026-10-24",
+      "adv": "Sao Paulo SP",
+      "m": "c",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-17",
+      "adv": "Internacional RS",
+      "m": "c",
+      "gp": 2,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-11",
+      "adv": "Bahia BA",
+      "m": "f",
+      "gp": 0,
+      "gs": 1,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-07",
+      "adv": "Bragantino SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-09-27",
+      "adv": "Uberlandia MG",
+      "m": "f",
+      "gp": 4,
+      "gs": 0,
+      "r": "V"
+     }
+    ],
+    "cc": [
+     5,
+     4,
+     7
+    ],
+    "cf": [
+     2,
+     4,
+     9
+    ]
+   },
+   "registradoEm": "2026-10-30T22:34:44.375Z",
+   "atualizadoEm": "2026-10-30T22:34:44.375Z"
+  },
+  {
+   "id": "jmvvjvu8w",
+   "data": "2026-10-31",
+   "liga": "Serie A",
+   "casa": "Coritiba PR",
+   "fora": "Vitoria BA",
+   "gc": null,
+   "gf": null,
+   "xgc": 1.58,
+   "xgf": 0.98,
+   "p1": 0.5085,
+   "px": 0.2638,
+   "p2": 0.2277,
+   "o25": 0.4716,
+   "bts": 0.5017,
+   "hora": "16:00",
+   "rodada": 33,
+   "ctx": {
+    "tc": {
+     "pos": 12,
+     "pts": 39,
+     "j": 32
+    },
+    "tf": {
+     "pos": 14,
+     "pts": 38,
+     "j": 32
+    },
+    "ref": {
+     "lider": 73,
+     "g4": 54,
+     "g6": 53,
+     "z4": 35,
+     "n": 20
+    },
+    "h2h": [
+     {
+      "d": "2026-05-02",
+      "c": "Vitoria BA",
+      "f": "Coritiba PR",
+      "gc": 4,
+      "gf": 1
+     },
+     {
+      "d": "2021-09-22",
+      "c": "Vitoria BA",
+      "f": "Coritiba PR",
+      "gc": 0,
+      "gf": 0
+     },
+     {
+      "d": "2021-06-23",
+      "c": "Coritiba PR",
+      "f": "Vitoria BA",
+      "gc": 1,
+      "gf": 0
+     },
+     {
+      "d": "2019-11-30",
+      "c": "Vitoria BA",
+      "f": "Coritiba PR",
+      "gc": 1,
+      "gf": 2
+     },
+     {
+      "d": "2019-08-27",
+      "c": "Coritiba PR",
+      "f": "Vitoria BA",
+      "gc": 1,
+      "gf": 1
+     }
+    ],
+    "uc": [
+     {
+      "d": "2026-10-26",
+      "adv": "Gremio RS",
+      "m": "c",
+      "gp": 0,
+      "gs": 1,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-17",
+      "adv": "Atletico MG",
+      "m": "f",
+      "gp": 0,
+      "gs": 1,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-12",
+      "adv": "Botafogo RJ",
+      "m": "c",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-09",
+      "adv": "Fluminense RJ",
+      "m": "f",
+      "gp": 0,
+      "gs": 4,
+      "r": "D"
+     },
+     {
+      "d": "2026-09-20",
+      "adv": "Vasco da Gama RJ",
+      "m": "f",
+      "gp": 0,
+      "gs": 5,
+      "r": "D"
+     }
+    ],
+    "uf": [
+     {
+      "d": "2026-10-24",
+      "adv": "Atletico PR",
+      "m": "c",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-20",
+      "adv": "Corinthians SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-11",
+      "adv": "Sao Paulo SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-08",
+      "adv": "Chapecoense SC",
+      "m": "c",
+      "gp": 4,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-09-20",
+      "adv": "Cruzeiro MG",
+      "m": "c",
+      "gp": 1,
+      "gs": 3,
+      "r": "D"
+     }
+    ],
+    "cc": [
+     5,
+     5,
+     6
+    ],
+    "cf": [
+     0,
+     6,
+     10
+    ]
+   },
+   "registradoEm": "2026-10-30T22:35:12.224Z",
+   "atualizadoEm": "2026-10-30T22:35:12.224Z"
   }
  ],
  "atualizado": "2026-10-30"
