@@ -79,7 +79,7 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(
 </head>
 <body>
 <div class="wrap">
-<nav class="topo" aria-label="Principal"><a class="marca" href="${raiz}">${esc(site.nome)}</a><span><a href="${raiz}">Previsões</a><a href="${raiz}como-funciona.html">Como funciona</a></span></nav>
+<nav class="topo" aria-label="Principal"><a class="marca" href="${raiz}">${esc(site.nome)}</a><span><a href="${raiz}"${caminho === "index.html" ? ' aria-current="page"' : ""}>Previsões</a><a href="${raiz}como-funciona.html"${caminho === "como-funciona.html" ? ' aria-current="page"' : ""}>Como funciona</a></span></nav>
 ${corpo}
 <footer class="aviso"><p>Conteúdo estatístico e informativo, não é recomendação de aposta. Apostas são proibidas para menores de 18 anos. Se for apostar, faça isso com responsabilidade e só com dinheiro que você pode perder.</p></footer>
 </div>
@@ -170,7 +170,7 @@ function paginaInicial(jogos) {
     }</tbody></table></div>` : `<div class="empty">Os resultados aparecem aqui depois de cada jogo.</div>`}</section>
 <section><h2>Como funciona</h2><p>O modelo estima os gols esperados de cada time a partir do ataque e da defesa, e calcula a chance de cada placar. <a href="como-funciona.html">Leia a metodologia completa</a>.</p></section>`;
   const jsonld = { "@context": "https://schema.org", "@type": "WebSite", name: site.nome, url: BASE + "/", inLanguage: "pt-BR", description: site.descricao };
-  return pagina({ titulo: `${site.nome}: probabilidades dos jogos do Brasileirão`, descricao: site.descricao, caminho: "index.html", raiz: "", corpo, jsonld });
+  return pagina({ titulo: `${site.nome}: probabilidades dos jogos do Brasileirão`, descricao: site.descricao, caminho: "index.html", raiz: "./", corpo, jsonld });
 }
 
 /* ---------- metodologia ---------- */
@@ -193,7 +193,7 @@ function paginaMetodo() {
 <li>Não é recomendação de aposta.</li></ul></section>
 <p><a href="./">← Ver as previsões</a></p>
 </main>`;
-  return pagina({ titulo: `Como funciona o modelo | ${site.nome}`, descricao: "Metodologia do Placar Provável: modelo de Poisson com ajuste Dixon-Coles, gols esperados por ataque e defesa, e teste em 2.280 jogos do Brasileirão.", caminho: "como-funciona.html", raiz: "", corpo, tipo: "article" });
+  return pagina({ titulo: `Como funciona o modelo | ${site.nome}`, descricao: "Metodologia do Placar Provável: modelo de Poisson com ajuste Dixon-Coles, gols esperados por ataque e defesa, e teste em 2.280 jogos do Brasileirão.", caminho: "como-funciona.html", raiz: "./", corpo, tipo: "article" });
 }
 
 /* ---------- gerar ---------- */
