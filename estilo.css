@@ -106,3 +106,16 @@ a:focus-visible{outline:2px solid var(--c2);outline-offset:2px}
 .pill.neutro{color:var(--muted)}
 .lista-links{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 18px}
 .relacionados{font-size:.92rem;color:var(--muted)}
+.lista-links{flex-direction:row;max-width:none}
+.grade-times{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:8px;max-width:none}
+.grade-times a{display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-content:center;min-height:52px;box-sizing:border-box;padding:10px 12px;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--line);color:var(--fg);text-decoration:none;min-width:0;transition:border-color .15s}
+.grade-times a:hover,.grade-times a:focus-visible{border-color:var(--c1)}
+.grade-times a.g4{border-left-color:var(--ok)}
+.grade-times a.z4{border-left-color:var(--bad)}
+.grade-times .pos{grid-row:1 / span 2;font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--muted);min-width:2ch;text-align:right;font-variant-numeric:tabular-nums}
+.grade-times .nome,.grade-times .info{grid-column:2}
+.grade-times .nome{font-family:var(--display);font-weight:700;font-size:1.15rem;line-height:1.1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.grade-times .info{font-size:.78rem;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.grade-times .info:empty{display:none}
+@media (prefers-reduced-motion: reduce){.grade-times a{transition:none}}
+.grade-times li{display:flex}.grade-times a{flex:1}
