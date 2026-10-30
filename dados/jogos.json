@@ -95,6 +95,38 @@
    "p2": 0.2255,
    "o25": 0.6417,
    "bts": 0.6277
+  },
+  {
+   "id": "jmvvfy397",
+   "data": "2026-10-30",
+   "liga": "Serie A",
+   "casa": "Corinthians SP",
+   "fora": "Mirassol SP",
+   "gc": null,
+   "gf": null,
+   "xgc": 1.15,
+   "xgf": 0.89,
+   "p1": 0.4081,
+   "px": 0.3148,
+   "p2": 0.2771,
+   "o25": 0.3341,
+   "bts": 0.4097
+  },
+  {
+   "id": "jmvvfypey",
+   "data": "2026-10-31",
+   "liga": "Serie A",
+   "casa": "Coritiba PR",
+   "fora": "Vitoria BA",
+   "gc": null,
+   "gf": null,
+   "xgc": 1.58,
+   "xgf": 0.98,
+   "p1": 0.5085,
+   "px": 0.2638,
+   "p2": 0.2277,
+   "o25": 0.4716,
+   "bts": 0.5017
   }
  ],
  "atualizado": "2026-10-30"
