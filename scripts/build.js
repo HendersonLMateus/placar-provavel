@@ -269,6 +269,19 @@ function gradeTimes(times, raiz) {
   }).join("")}</ul>`;
 }
 
+/* Próximos jogos agrupados por rodada, com link para a página de cada rodada */
+function proximosPorRodada(pend) {
+  const grupos = new Map();
+  pend.forEach((j) => { const k = j.rodada ? `${j.liga}|${j.rodada}` : ""; if (!grupos.has(k)) grupos.set(k, []); grupos.get(k).push(j); });
+  const temRodada = [...grupos.keys()].some(Boolean);
+  if (!temRodada) return `<div class="games">${pend.map((j) => link(j, "")).join("")}</div>`;
+  return [...grupos.entries()].sort(([a], [b]) => (a ? 0 : 1) - (b ? 0 : 1)).map(([k, js]) => {
+    if (!k) return `<div class="grupo-rodada"><h3>Outros jogos</h3><div class="games">${js.map((j) => link(j, "")).join("")}</div></div>`;
+    const j0 = js[0], url = urlRodada(j0.liga, j0.rodada);
+    return `<div class="grupo-rodada"><div class="grupo-topo"><h3><a href="${url}">Rodada ${j0.rodada}</a></h3><a class="ver-rodada" href="${url}">Ver a rodada completa →</a></div><div class="games">${js.map((j) => link(j, "")).join("")}</div></div>`;
+  }).join("");
+}
+
 /* ---------- página inicial ---------- */
 function paginaInicial(jogos, times, rodadas) {
   const pend = jogos.filter((j) => !jogado(j)).sort((a, b) => ordData(a, b, 1));
@@ -276,12 +289,12 @@ function paginaInicial(jogos, times, rodadas) {
   const feitos = d.feitos.slice().sort((a, b) => ordData(a, b, -1));
   const corpo = `<header><span class="eyebrow">Modelo de gols · Brasileirão${dados.atualizado ? " · atualizado em " + dataCurta(dados.atualizado) : ""}</span><h1>${esc(site.nome)}</h1>
 <p class="muted">Prognósticos do Brasileirão calculados por um modelo estatístico de gols, sem palpite pago e sem ligação com casas de aposta. Depois de cada jogo, o resultado entra no placar de desempenho abaixo, acerte ou erre.</p></header>
-<section><h2>Próximos jogos</h2>${pend.length ? `<div class="games">${pend.map((j) => link(j, "")).join("")}</div>`
+<section><h2>Próximos jogos</h2>${pend.length ? proximosPorRodada(pend)
     : `<div class="empty">Nenhuma previsão aberta no momento. As próximas aparecem aqui antes de cada rodada.</div>`}</section>
+${rodadas.length ? `<section><h2>Rodadas</h2><ul class="lista-links">${rodadas.map((r) => `<li><a href="${urlRodada(r.liga, r.n)}">${esc(r.liga)}, rodada ${r.n}</a></li>`).join("")}</ul></section>` : ""}
 <section><h2>Desempenho até aqui</h2>${blocoDesempenho(d)}
 <p class="muted nota">Com poucos jogos, esses números oscilam muito. No teste com 2.280 jogos da Série A de 2019 a 2024, o favorito do modelo venceu em 48,7% das vezes, contra 46,2% de apostar sempre no mandante.</p></section>
 <section><h2>Resultados</h2>${feitos.length ? tabelaResultados(feitos, "") : `<div class="empty">Os resultados aparecem aqui depois de cada jogo.</div>`}</section>
-${rodadas.length ? `<section><h2>Rodadas</h2><ul class="lista-links">${rodadas.map((r) => `<li><a href="${urlRodada(r.liga, r.n)}">${esc(r.liga)}, rodada ${r.n}</a></li>`).join("")}</ul></section>` : ""}
 <section><h2>Times</h2>${gradeTimes(times, "")}<p class="nota"><a href="times.html">Ver a tabela com o próximo jogo de cada time →</a></p></section>
 <section><h2>Como funciona</h2><p>O modelo estima os gols esperados de cada time a partir do ataque e da defesa, e calcula a chance de cada placar. <a href="como-funciona.html">Leia a metodologia completa</a>.</p></section>`;
   const jsonld = { "@context": "https://schema.org", "@type": "WebSite", name: site.nome, url: BASE + "/", inLanguage: "pt-BR", description: site.descricao };
