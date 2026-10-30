@@ -59,6 +59,7 @@ function pagina({ titulo, descricao, caminho, raiz, corpo, jsonld, tipo = "websi
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>${esc(titulo)}</title>
 <meta name="description" content="${esc(descricao)}">
+${site.googleVerificacao ? `<meta name="google-site-verification" content="${esc(site.googleVerificacao)}">` : ""}
 ${noindex ? '<meta name="robots" content="noindex">' : `<link rel="canonical" href="${canon}">`}
 <meta property="og:type" content="${tipo}">
 <meta property="og:site_name" content="${esc(site.nome)}">
