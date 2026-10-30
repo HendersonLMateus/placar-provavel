@@ -126,3 +126,9 @@ a:focus-visible{outline:2px solid var(--c2);outline-offset:2px}
 .grupo-rodada h3 a{color:var(--fg);text-decoration:none}
 .grupo-rodada h3 a:hover{color:var(--c1)}
 .ver-rodada{font-size:.9rem}
+.grade-rodadas{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.grade-times a.aberta{border-left-color:var(--c2)}
+.grade-rodadas .nome small{font-family:var(--body);font-weight:400;font-size:.78rem;color:var(--muted);margin-left:4px}
+.grade-rodadas .info{white-space:normal}
+.grade-rodadas .estado{color:var(--fg)}
+.grade-rodadas a.aberta .estado{color:var(--c2)}
