@@ -255,6 +255,20 @@ function tabelaResultados(lista, raiz, comSelo = true) {
 }
 const link = (j, raiz) => `<a class="cardlink" href="${raiz}${urlJogo(j)}" aria-label="${esc(j.casa)} x ${esc(j.fora)}: ver análise">${cartao(j)}</a>`;
 
+/* Grade de times: ordenada pela posição na tabela quando conhecida, senão por nome */
+function gradeTimes(times, raiz) {
+  const ordenados = times.slice().sort((a, b) => (a.tab && b.tab ? a.tab.pos - b.tab.pos : a.tab ? -1 : b.tab ? 1 : a.nome.localeCompare(b.nome, "pt-BR")));
+  return `<ul class="grade-times">${ordenados.map((t) => {
+    const prox = t.jogos.filter((j) => !jogado(j)).sort((a, b) => ordData(a, b, 1))[0];
+    const adv = prox ? (prox.casa === t.nome ? prox.fora : prox.casa) : null;
+    const zona = t.tab && t.ref ? (t.tab.pos <= 4 ? "g4" : t.tab.pos >= 17 ? "z4" : "") : "";
+    return `<li><a href="${raiz}${urlTime(t.nome)}"${zona ? ` class="${zona}"` : ""}>` +
+      (t.tab ? `<span class="pos">${t.tab.pos}º</span>` : "") +
+      `<span class="nome">${esc(t.nome)}</span>` +
+      `<span class="info">${t.tab ? `${t.tab.pts} pts` : ""}${t.tab && adv ? " · " : ""}${adv ? `Próx.: ${esc(adv)} (${prox.casa === t.nome ? "casa" : "fora"})` : ""}</span></a></li>`;
+  }).join("")}</ul>`;
+}
+
 /* ---------- página inicial ---------- */
 function paginaInicial(jogos, times, rodadas) {
   const pend = jogos.filter((j) => !jogado(j)).sort((a, b) => ordData(a, b, 1));
@@ -268,7 +282,7 @@ function paginaInicial(jogos, times, rodadas) {
 <p class="muted nota">Com poucos jogos, esses números oscilam muito. No teste com 2.280 jogos da Série A de 2019 a 2024, o favorito do modelo venceu em 48,7% das vezes, contra 46,2% de apostar sempre no mandante.</p></section>
 <section><h2>Resultados</h2>${feitos.length ? tabelaResultados(feitos, "") : `<div class="empty">Os resultados aparecem aqui depois de cada jogo.</div>`}</section>
 ${rodadas.length ? `<section><h2>Rodadas</h2><ul class="lista-links">${rodadas.map((r) => `<li><a href="${urlRodada(r.liga, r.n)}">${esc(r.liga)}, rodada ${r.n}</a></li>`).join("")}</ul></section>` : ""}
-<section><h2>Times</h2><ul class="lista-links times">${times.map((t) => `<li><a href="${urlTime(t.nome)}">${esc(t.nome)}</a></li>`).join("")}</ul></section>
+<section><h2>Times</h2>${gradeTimes(times, "")}<p class="nota"><a href="times.html">Ver a tabela com o próximo jogo de cada time →</a></p></section>
 <section><h2>Como funciona</h2><p>O modelo estima os gols esperados de cada time a partir do ataque e da defesa, e calcula a chance de cada placar. <a href="como-funciona.html">Leia a metodologia completa</a>.</p></section>`;
   const jsonld = { "@context": "https://schema.org", "@type": "WebSite", name: site.nome, url: BASE + "/", inLanguage: "pt-BR", description: site.descricao };
   return pagina({ titulo: `${site.nome}: prognósticos e probabilidades do Brasileirão`, descricao: site.descricao, caminho: "index.html", raiz: "./", corpo, jsonld });
