@@ -86,8 +86,8 @@
    "liga": "Serie A",
    "casa": "Fluminense RJ",
    "fora": "Santos SP",
-   "gc": null,
-   "gf": null,
+   "gc": 1,
+   "gf": 2,
    "xgc": 2.05,
    "xgf": 1.26,
    "p1": 0.5529,
@@ -97,5 +97,5 @@
    "bts": 0.6277
   }
  ],
- "atualizado": "2026-10-19"
+ "atualizado": "2026-10-30"
 }
