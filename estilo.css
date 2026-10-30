@@ -70,3 +70,26 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px soli
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .msg{font-size:.88rem}
 .msg.err{color:var(--bad)}
+
+/* ---------- páginas estáticas ---------- */
+body{margin:0}
+a{color:var(--c1);text-underline-offset:2px}
+a:focus-visible{outline:2px solid var(--c2);outline-offset:2px}
+.topo{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px}
+.topo .marca{font-family:var(--display);font-weight:700;font-size:1.3rem;color:var(--fg);text-decoration:none}
+.topo span{display:flex;gap:18px;font-size:.92rem}
+.topo span a{color:var(--muted);text-decoration:none}
+.topo span a:hover{color:var(--fg)}
+.artigo{display:flex;flex-direction:column;gap:28px}
+.artigo header{display:flex;flex-direction:column;gap:10px}
+.artigo section{gap:10px}
+.nota{font-size:.88rem}
+.destaque{padding:12px 14px;background:var(--surface);border-left:3px solid var(--line)}
+.destaque.ok{border-left-color:var(--ok)}
+.destaque.bad{border-left-color:var(--bad)}
+.games.solo{grid-template-columns:1fr;max-width:480px}
+.cardlink{display:block;color:inherit;text-decoration:none}
+.cardlink .game{height:100%;box-sizing:border-box;transition:border-color .15s}
+.cardlink:hover .game,.cardlink:focus-visible .game{border-color:var(--c1)}
+.aviso p{max-width:65ch}
+@media (prefers-reduced-motion: reduce){.cardlink .game{transition:none}}

@@ -47,3 +47,13 @@ function ler(texto){
   return {dados: out, faltando: faltando};
 }
 
+
+/* Placares mais prováveis (mesmo modelo), em ordem decrescente de probabilidade. */
+function placares(lh, la, n){
+  var N = 11, M = [], s = 0, out = [], i, j;
+  for (i = 0; i < N; i++){ M[i] = []; for (j = 0; j < N; j++) M[i][j] = pmf(i, lh) * pmf(j, la); }
+  M[0][0] *= 1 - lh * la * RHO; M[0][1] *= 1 + lh * RHO; M[1][0] *= 1 + la * RHO; M[1][1] *= 1 - RHO;
+  for (i = 0; i < N; i++) for (j = 0; j < N; j++) s += M[i][j];
+  for (i = 0; i < N; i++) for (j = 0; j < N; j++) out.push({gc: i, gf: j, p: M[i][j] / s});
+  return out.sort(function(a, b){ return b.p - a.p; }).slice(0, n || 3);
+}
