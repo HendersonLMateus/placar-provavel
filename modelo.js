@@ -44,7 +44,74 @@ function ler(texto){
   var t = L.find(function(s){ return /^(Table|Classificação)\s+/i.test(s); }); if (t) out.liga = t.replace(/^(Table|Classificação)\s+/i, "");
   var d = texto.match(/\b(\d{2})\.(\d{2})\.(20\d{2})\b/); if (d) out.data = d[3] + "-" + d[2] + "-" + d[1];
   ["casa","fora","cMarc","cSof","fMarc","fSof","cMarcCasa","cSofCasa","fMarcFora","fSofFora","lgH","lgA"].forEach(function(k){ if (out[k] === undefined) faltando.push(k); });
+  // Data e hora no horário local do estádio. O Primatips mostra a data no fuso dele e a hora local entre parênteses
+  // ("22:30 (19:30 horário local)"); jogos à noite no Brasil podem aparecer com a data do dia seguinte.
+  var h = texto.match(/(\d{1,2}):(\d{2})\s*\((\d{1,2}):(\d{2})\s*(?:local time|horário local)\)/i);
+  if (h && out.data){
+    var dif = (+h[1] * 60 + +h[2]) - (+h[3] * 60 + +h[4]);
+    if (dif < -720) dif += 1440; if (dif > 720) dif -= 1440;
+    var dt = new Date(Date.UTC(+out.data.slice(0, 4), +out.data.slice(5, 7) - 1, +out.data.slice(8, 10), +h[1], +h[2]) - dif * 60000);
+    out.data = dt.toISOString().slice(0, 10); out.hora = h[3].padStart(2, "0") + ":" + h[4];
+  }
+  try { out.ctx = lerContexto(L, out.casa, out.fora); } catch (e) { out.ctx = null; }
   return {dados: out, faltando: faltando};
+}
+
+/* Contexto do jogo (tabela, forma, confronto direto, campanha). Tudo opcional: o que não for encontrado fica de fora. */
+function normNome(s){ return String(s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/\s+[a-z]{2}$/, "").replace(/[^a-z0-9]/g, ""); }
+function lerPartidas(L, i){
+  var out = [];
+  for (var k = i + 1; k + 3 < L.length; ){
+    if (/^\d{4}-\d{2}-\d{2}$/.test(L[k]) && /^\d+\s*-\s*\d+$/.test(L[k + 2])){
+      var g = L[k + 2].split("-").map(function(x){ return +x.trim(); });
+      out.push({d: L[k], c: L[k + 1], f: L[k + 3], gc: g[0], gf: g[1]}); k += 4;
+    } else if (/^(W|V)\s+(D|E)\s+(L|D)\b/.test(L[k]) || /^(More|Mais)/.test(L[k])) break;
+    else k++;
+  }
+  return out;
+}
+function lerContexto(L, casa, fora){
+  var ctx = {}, nc = normNome(casa), nf = normNome(fora);
+  // Classificação
+  var iTab = L.findIndex(function(s){ return /^(Table|Classificação)\s+/i.test(s); });
+  if (iTab >= 0){
+    var tab = [];
+    for (var k = iTab + 2; k + 2 < L.length; k += 3){
+      if (!/^\d{1,2}$/.test(L[k])) break;
+      var n = nums(L[k + 2]);
+      if (n.length < 8) break;
+      tab.push({pos: +L[k], time: L[k + 1], j: n[0], v: n[1], e: n[2], d: n[3], pts: n[n.length - 1]});
+    }
+    var ach = function(nn){ return tab.find(function(t){ return normNome(t.time) === nn; }); };
+    var tc = ach(nc), tf = ach(nf);
+    if (tc) ctx.tc = {pos: tc.pos, pts: tc.pts, j: tc.j};
+    if (tf) ctx.tf = {pos: tf.pos, pts: tf.pts, j: tf.j};
+    if (tab.length >= 17) ctx.ref = {lider: tab[0].pts, g4: tab[3].pts, g6: tab[5].pts, z4: tab[16].pts, n: tab.length};
+  }
+  // Últimos jogos de cada time e confronto direto
+  L.forEach(function(s, i){
+    if (/^(H2H last \d+ games|Últimos \d+ jogos diretas)/i.test(s)){
+      ctx.h2h = lerPartidas(L, i).slice(0, 5);
+      return;
+    }
+    var m = s.match(/^(.+?)\s+(last \d+ games|últimos \d+ jogos)$/i);
+    if (!m) return;
+    var quem = normNome(m[1]) === nc ? "uc" : normNome(m[1]) === nf ? "uf" : null;
+    if (!quem) return;
+    var nn = quem === "uc" ? nc : nf;
+    ctx[quem] = lerPartidas(L, i).slice(0, 5).map(function(p){
+      var emCasa = normNome(p.c) === nn, gp = emCasa ? p.gc : p.gf, gs = emCasa ? p.gf : p.gc;
+      return {d: p.d, adv: emCasa ? p.f : p.c, m: emCasa ? "c" : "f", gp: gp, gs: gs, r: gp > gs ? "V" : gp < gs ? "D" : "E"};
+    });
+  });
+  // Campanha em casa (mandante) e fora (visitante): segunda ocorrência de vitórias/empates/derrotas
+  var linha = function(rx){ return L.filter(function(s){ return rx.test(s); }).map(nums); };
+  var V = linha(/^(Wins|Vitórias)\b/i), E = linha(/^(Draws|Empates)\b/i), D = linha(/^(Losses|Derrotas)\b/i);
+  if (V.length >= 2 && E.length >= 2 && D.length >= 2){
+    ctx.cc = [V[1][0], E[1][0], D[1][0]];
+    ctx.cf = [V[1][1], E[1][1], D[1][1]];
+  }
+  return Object.keys(ctx).length ? ctx : null;
 }
 
 

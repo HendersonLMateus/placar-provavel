@@ -94,3 +94,15 @@ a:focus-visible{outline:2px solid var(--c2);outline-offset:2px}
 .aviso p{max-width:65ch}
 @media (prefers-reduced-motion: reduce){.cardlink .game{transition:none}}
 .topo span a[aria-current="page"]{color:var(--fg);text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--c1)}
+
+/* ---------- SEO: migalhas, forma recente, listas ---------- */
+.migalhas ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px;font-size:.82rem;color:var(--muted)}
+.migalhas li+li::before{content:"›";margin-right:6px;color:var(--muted)}
+.migalhas a{color:var(--muted)}
+.migalhas li[aria-current]{color:var(--fg)}
+.forma{display:inline-flex;gap:4px;vertical-align:middle}
+.forma i{font-style:normal;font-family:var(--mono);font-size:.75rem;font-weight:500;width:22px;height:22px;display:inline-grid;place-items:center;color:var(--bg)}
+.forma .rV{background:var(--ok)} .forma .rE{background:var(--cx)} .forma .rD{background:var(--bad)}
+.pill.neutro{color:var(--muted)}
+.lista-links{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 18px}
+.relacionados{font-size:.92rem;color:var(--muted)}

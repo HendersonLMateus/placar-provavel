@@ -51,7 +51,7 @@
 <script src="comum.js"></script>
 <script>
 var state = {jogos: []}, rascunho = null;
-var CAMPOS = [["data","Data (AAAA-MM-DD)"],["liga","Liga"],["casa","Mandante"],["fora","Visitante"],["lgH","Gols/jogo mandantes da liga"],["lgA","Gols/jogo visitantes da liga"],
+var CAMPOS = [["data","Data (AAAA-MM-DD)"],["hora","Hora local (opcional)"],["rodada","Rodada (opcional)"],["liga","Liga"],["casa","Mandante"],["fora","Visitante"],["lgH","Gols/jogo mandantes da liga"],["lgA","Gols/jogo visitantes da liga"],
   ["cMarc","Mandante: marca (geral)"],["cSof","Mandante: sofre (geral)"],["cMarcCasa","Mandante: marca em casa"],["cSofCasa","Mandante: sofre em casa"],
   ["fMarc","Visitante: marca (geral)"],["fSof","Visitante: sofre (geral)"],["fMarcFora","Visitante: marca fora"],["fSofFora","Visitante: sofre fora"]];
 var $ = function(id){ return document.getElementById(id); };
@@ -88,7 +88,13 @@ $("btn-add").addEventListener("click", function(){
   var falta = num.filter(function(k){ o[k] = parseFloat(String(o[k]).replace(",", ".")); return !(o[k] > 0); });
   if (!o.casa || !o.fora) falta.push("times");
   if (falta.length){ msg("Faltou preencher: " + falta.join(", ") + ".", true); return; }
-  state.jogos.push(Object.assign({id: "j" + Date.now().toString(36), data: o.data, liga: o.liga, casa: o.casa, fora: o.fora, gc: null, gf: null}, prever(o)));
+  var agora = new Date().toISOString();
+  var novo = Object.assign({id: "j" + Date.now().toString(36), data: o.data, liga: o.liga, casa: o.casa, fora: o.fora, gc: null, gf: null}, prever(o));
+  if (o.hora) novo.hora = o.hora;
+  var rod = parseInt(o.rodada, 10); if (rod > 0) novo.rodada = rod;
+  if (rascunho && rascunho.ctx) novo.ctx = rascunho.ctx;
+  novo.registradoEm = agora; novo.atualizadoEm = agora;
+  state.jogos.push(novo);
   $("form").hidden = true; $("colar").value = ""; rascunho = null;
   msg(o.casa + " × " + o.fora + " adicionado. Depois de terminar, publique no passo 4.");
   render();
@@ -99,7 +105,7 @@ document.addEventListener("click", function(ev){
   if (b.dataset.acao === "placar"){
     var gc = $("gc-" + id).value, gf = $("gf-" + id).value;
     if (gc === "" || gf === ""){ msg("Preencha os gols dos dois times.", true); return; }
-    var j = state.jogos.find(function(x){ return x.id === id; }); j.gc = parseInt(gc, 10); j.gf = parseInt(gf, 10);
+    var j = state.jogos.find(function(x){ return x.id === id; }); j.gc = parseInt(gc, 10); j.gf = parseInt(gf, 10); j.atualizadoEm = new Date().toISOString();
     msg("Placar registrado: " + j.casa + " " + j.gc + " × " + j.gf + " " + j.fora + ".");
   } else if (b.dataset.acao === "remover"){
     if (b.dataset.confirmar !== "1"){ b.dataset.confirmar = "1"; b.textContent = "Confirmar remoção"; return; }
