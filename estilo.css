@@ -93,3 +93,4 @@ a:focus-visible{outline:2px solid var(--c2);outline-offset:2px}
 .cardlink:hover .game,.cardlink:focus-visible .game{border-color:var(--c1)}
 .aviso p{max-width:65ch}
 @media (prefers-reduced-motion: reduce){.cardlink .game{transition:none}}
+.topo span a[aria-current="page"]{color:var(--fg);text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--c1)}
