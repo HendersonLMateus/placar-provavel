@@ -282,6 +282,20 @@ function proximosPorRodada(pend) {
   }).join("");
 }
 
+/* Cartões de rodada: número em destaque, período, quantidade de jogos e situação */
+function gradeRodadas(rodadas, raiz) {
+  return `<ul class="grade-times grade-rodadas">${rodadas.map((r) => {
+    const datas = r.jogos.map((j) => j.data).filter(Boolean).sort();
+    const periodo = datas.length ? (datas[0] === datas[datas.length - 1] ? diaMes(datas[0]) : `${diaMes(datas[0])} a ${diaMes(datas[datas.length - 1])}`) : "";
+    const abertos = r.jogos.filter((j) => !jogado(j)).length;
+    const estado = abertos ? `${abertos} a jogar` : "encerrada";
+    return `<li><a href="${raiz}${urlRodada(r.liga, r.n)}"${abertos ? ' class="aberta"' : ""}>` +
+      `<span class="nome">Rodada ${r.n} <small>${esc(r.liga.replace(/^Brasileirão\s+/, ""))}</small></span>` +
+      `<span class="info">${r.jogos.length} jogo${r.jogos.length === 1 ? "" : "s"}${periodo ? " · " + periodo : ""}</span>` +
+      `<span class="info estado">${estado}</span></a></li>`;
+  }).join("")}</ul>`;
+}
+
 /* ---------- página inicial ---------- */
 function paginaInicial(jogos, times, rodadas) {
   const pend = jogos.filter((j) => !jogado(j)).sort((a, b) => ordData(a, b, 1));
@@ -291,7 +305,7 @@ function paginaInicial(jogos, times, rodadas) {
 <p class="muted">Prognósticos do Brasileirão calculados por um modelo estatístico de gols, sem palpite pago e sem ligação com casas de aposta. Depois de cada jogo, o resultado entra no placar de desempenho abaixo, acerte ou erre.</p></header>
 <section><h2>Próximos jogos</h2>${pend.length ? proximosPorRodada(pend)
     : `<div class="empty">Nenhuma previsão aberta no momento. As próximas aparecem aqui antes de cada rodada.</div>`}</section>
-${rodadas.length ? `<section><h2>Rodadas</h2><ul class="lista-links">${rodadas.map((r) => `<li><a href="${urlRodada(r.liga, r.n)}">${esc(r.liga)}, rodada ${r.n}</a></li>`).join("")}</ul></section>` : ""}
+${rodadas.length ? `<section><h2>Rodadas</h2>${gradeRodadas(rodadas, "")}</section>` : ""}
 <section><h2>Desempenho até aqui</h2>${blocoDesempenho(d)}
 <p class="muted nota">Com poucos jogos, esses números oscilam muito. No teste com 2.280 jogos da Série A de 2019 a 2024, o favorito do modelo venceu em 48,7% das vezes, contra 46,2% de apostar sempre no mandante.</p></section>
 <section><h2>Resultados</h2>${feitos.length ? tabelaResultados(feitos, "") : `<div class="empty">Os resultados aparecem aqui depois de cada jogo.</div>`}</section>
