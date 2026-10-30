@@ -197,8 +197,8 @@ function secaoContexto(j, raiz) {
 function paginaJogo(j) {
   const c = j.casa, f = j.fora, liga = j.liga;
   const tops = placares(j.xgc, j.xgf, 5);
-  const quando = j.data ? ` (${dataCurta(j.data)})` : "";
-  const titulo = `${c} x ${f}: prognóstico e probabilidades${quando}`;
+  const quando = j.data ? ` (${diaMes(j.data)})` : "";
+  const titulo = `${c} x ${f}${quando}: prognóstico e probabilidades`;
   let descricao = `${c} x ${f} pelo ${liga}${j.data ? " em " + dataLonga(j.data) : ""}: ${pct(j.p1)} vitória do ${c}, ${pct(j.px)} empate, ${pct(j.p2)} vitória do ${f}. Placar mais provável ${tops[0].gc} x ${tops[0].gf}.`;
   if (j.ctx && j.ctx.tc && j.ctx.tf) descricao += ` ${ord(j.ctx.tc.pos)} contra ${ord(j.ctx.tf.pos)} na tabela.`;
   const itens = [{ nome: "Início", url: "" }];
@@ -227,7 +227,7 @@ ${secaoContexto(j, "../")}
 <section><h2>De onde vêm esses números</h2><p>As probabilidades saem de um modelo de gols que compara o ataque e a defesa de cada time com a média da liga, na campanha geral e em casa ou fora. A tabela, a sequência recente e o confronto direto aparecem como contexto e não entram no cálculo. <a href="../como-funciona.html">Veja como o modelo funciona</a>.</p></section>
 <p class="relacionados">Mais sobre os times: <a href="../${urlTime(c)}">${esc(c)}</a> · <a href="../${urlTime(f)}">${esc(f)}</a>${j.rodada ? ` · <a href="../${urlRodada(liga, j.rodada)}">todos os jogos da rodada ${j.rodada}</a>` : ""}</p>
 </main>`;
-  return pagina({ titulo: `${titulo} | ${site.nome}`, descricao, caminho: urlJogo(j), raiz: "../", corpo, jsonld, tipo: "article" });
+  return pagina({ titulo, descricao, caminho: urlJogo(j), raiz: "../", corpo, jsonld, tipo: "article" });
 }
 
 /* ---------- desempenho ---------- */
@@ -326,7 +326,7 @@ ${passados.length ? `<section><h2>Jogos analisados</h2>${tabelaResultados(passad
 <p class="relacionados"><a href="../times.html">← Todos os times</a></p>
 </main>`;
   const jsonld = { "@context": "https://schema.org", "@graph": [{ "@type": "SportsTeam", name: t.nome, sport: "Futebol", url: `${BASE}/${urlTime(t.nome)}` }, ldMigalhas(itens)] };
-  return pagina({ titulo: `${t.nome}: próximo jogo, prognóstico e probabilidades | ${site.nome}`, descricao, caminho: urlTime(t.nome), raiz: "../", corpo, jsonld });
+  return pagina({ titulo: `${t.nome}: próximo jogo e prognóstico | ${site.nome}`, descricao, caminho: urlTime(t.nome), raiz: "../", corpo, jsonld });
 }
 function paginaTimes(times) {
   const itens = [{ nome: "Início", url: "" }, { nome: "Times", url: "times.html" }];
@@ -337,11 +337,11 @@ function paginaTimes(times) {
     return `<tr><td class="c">${t.tab ? t.tab.pos : "—"}</td><td><a href="${urlTime(t.nome)}">${esc(t.nome)}</a></td><td class="c">${t.tab ? t.tab.pts : "—"}</td><td>${prox ? `<a href="${urlJogo(prox)}">${esc(prox.casa)} x ${esc(prox.fora)}</a> (${diaMes(prox.data)})` : '<span class="muted">—</span>'}</td></tr>`;
   }).join("");
   const corpo = `<main class="artigo">
-${migalhas(itens, "")}
+${migalhas(itens, "./")}
 <header><span class="eyebrow">Brasileirão</span><h1>Times: próximos jogos e prognósticos</h1><p class="muted">Escolha um time para ver o próximo jogo, as probabilidades calculadas pelo modelo e o histórico de previsões. A posição e os pontos vêm do jogo mais recente analisado de cada time.</p></header>
 <div class="tablewrap"><table><thead><tr><th class="c">Pos.</th><th>Time</th><th class="c">Pts</th><th>Próximo jogo analisado</th></tr></thead><tbody>${linhas}</tbody></table></div>
 </main>`;
-  return pagina({ titulo: `Times do Brasileirão: próximos jogos e prognósticos | ${site.nome}`, descricao: "Próximo jogo e prognóstico de cada time do Brasileirão, com probabilidades de vitória, empate e derrota calculadas por um modelo estatístico de gols.", caminho: "times.html", raiz: "", corpo, jsonld: { "@context": "https://schema.org", ...ldMigalhas(itens) } });
+  return pagina({ titulo: `Times do Brasileirão: próximos jogos e prognósticos | ${site.nome}`, descricao: "Próximo jogo e prognóstico de cada time do Brasileirão, com probabilidades de vitória, empate e derrota calculadas por um modelo estatístico de gols.", caminho: "times.html", raiz: "./", corpo, jsonld: { "@context": "https://schema.org", ...ldMigalhas(itens) } });
 }
 
 /* ---------- rodadas ---------- */
@@ -375,7 +375,7 @@ ${feitos.length ? `<section><h2>Resultados</h2>${tabelaResultados(feitos, "../")
 function paginaMetodo() {
   const itens = [{ nome: "Início", url: "" }, { nome: "Como funciona", url: "como-funciona.html" }];
   const corpo = `<main class="artigo">
-${migalhas(itens, "")}
+${migalhas(itens, "./")}
 <header><span class="eyebrow">Metodologia</span><h1>Como o modelo calcula as probabilidades</h1></header>
 <section><h2>A ideia</h2><p>Futebol tem poucos gols, e o número de gols de um time numa partida segue de perto uma distribuição de Poisson. Se sabemos quantos gols cada time deve marcar em média naquele jogo, dá para calcular a chance de cada placar e, somando os placares, a chance de vitória, empate, mais de 2,5 gols e ambas marcam.</p></section>
 <section><h2>Os gols esperados</h2><ul>
