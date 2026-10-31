@@ -454,8 +454,8 @@
    "liga": "Serie A",
    "casa": "Corinthians SP",
    "fora": "Mirassol SP",
-   "gc": null,
-   "gf": null,
+   "gc": 2,
+   "gf": 0,
    "xgc": 1.15,
    "xgf": 0.89,
    "p1": 0.4081,
@@ -616,7 +616,7 @@
     ]
    },
    "registradoEm": "2026-10-30T22:34:44.375Z",
-   "atualizadoEm": "2026-10-30T22:34:44.375Z"
+   "atualizadoEm": "2026-10-31T14:15:06.978Z"
   },
   {
    "id": "jmvvjvu8w",
@@ -789,5 +789,5 @@
    "atualizadoEm": "2026-10-30T22:35:12.224Z"
   }
  ],
- "atualizado": "2026-10-30"
+ "atualizado": "2026-10-31"
 }
