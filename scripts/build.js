@@ -107,7 +107,7 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(
 <div class="wrap">
 <nav class="topo" aria-label="Principal"><a class="marca" href="${raiz}">${esc(site.nome)}</a><span><a href="${raiz}"${atual("index.html")}>Previsões</a><a href="${raiz}times.html"${atual("times.html")}>Times</a><a href="${raiz}como-funciona.html"${atual("como-funciona.html")}>Como funciona</a></span></nav>
 ${corpo}
-<footer class="aviso"><p>Conteúdo estatístico e informativo, não é recomendação de aposta. Apostas são proibidas para menores de 18 anos. Se for apostar, faça isso com responsabilidade e só com dinheiro que você pode perder.</p></footer>
+<footer class="aviso"><p>O Placar Provável é um projeto de estatística aplicada ao futebol. As probabilidades vêm de um modelo matemático de gols, calculado com dados públicos das partidas, e mostram tendências, não certezas: um resultado com 60% de chance deixa de acontecer em 4 de cada 10 jogos. Erros e acertos ficam registrados no histórico do modelo.${caminho === "como-funciona.html" ? "" : ` <a href="${raiz}como-funciona.html">Veja como o modelo funciona</a>.`}</p></footer>
 </div>
 </body>
 </html>
@@ -302,12 +302,12 @@ function paginaInicial(jogos, times, rodadas) {
   const d = desempenho(jogos);
   const feitos = d.feitos.slice().sort((a, b) => ordData(a, b, -1));
   const corpo = `<header><span class="eyebrow">Modelo de gols · Brasileirão${dados.atualizado ? " · atualizado em " + dataCurta(dados.atualizado) : ""}</span><h1>${esc(site.nome)}</h1>
-<p class="muted">Prognósticos do Brasileirão calculados por um modelo estatístico de gols, sem palpite pago e sem ligação com casas de aposta. Depois de cada jogo, o resultado entra no placar de desempenho abaixo, acerte ou erre.</p></header>
+<p class="muted">Prognósticos do Brasileirão calculados por um modelo estatístico de gols, com metodologia aberta e histórico público de acertos. Depois de cada jogo, o resultado entra no placar de desempenho abaixo, acerte ou erre.</p></header>
 <section><h2>Próximos jogos</h2>${pend.length ? proximosPorRodada(pend)
     : `<div class="empty">Nenhuma previsão aberta no momento. As próximas aparecem aqui antes de cada rodada.</div>`}</section>
 ${rodadas.length ? `<section><h2>Rodadas</h2>${gradeRodadas(rodadas, "")}</section>` : ""}
 <section><h2>Desempenho até aqui</h2>${blocoDesempenho(d)}
-<p class="muted nota">Com poucos jogos, esses números oscilam muito. No teste com 2.280 jogos da Série A de 2019 a 2024, o favorito do modelo venceu em 48,7% das vezes, contra 46,2% de apostar sempre no mandante.</p></section>
+<p class="muted nota">Com poucos jogos, esses números oscilam muito. No teste com 2.280 jogos da Série A de 2019 a 2024, o favorito do modelo venceu em 48,7% das vezes, contra 46,2% de escolher sempre o mandante.</p></section>
 <section><h2>Resultados</h2>${feitos.length ? tabelaResultados(feitos, "") : `<div class="empty">Os resultados aparecem aqui depois de cada jogo.</div>`}</section>
 <section><h2>Times</h2>${gradeTimes(times, "")}<p class="nota"><a href="times.html">Ver a tabela com o próximo jogo de cada time →</a></p></section>
 <section><h2>Como funciona</h2><p>O modelo estima os gols esperados de cada time a partir do ataque e da defesa, e calcula a chance de cada placar. <a href="como-funciona.html">Leia a metodologia completa</a>.</p></section>`;
@@ -412,13 +412,13 @@ ${migalhas(itens, "./")}
 <section><h2>O ajuste de Dixon-Coles</h2><p>A distribuição de Poisson pura erra um pouco nos placares baixos (0 x 0, 1 x 0, 0 x 1, 1 x 1). Aplicamos a correção proposta por Dixon e Coles em 1997, usada em boa parte dos modelos de futebol.</p></section>
 <section><h2>Teste com jogos passados</h2><p>Antes de publicar, testamos uma versão completa do modelo em 2.280 jogos da Série A de 2019 a 2024, prevendo cada partida só com dados anteriores a ela.</p>
 <div class="tablewrap"><table><thead><tr><th>Método</th><th class="c">Acerto do resultado</th></tr></thead><tbody>
-<tr><td>Este modelo</td><td class="c"><b>48,7%</b></td></tr><tr><td>Apostar sempre no mandante</td><td class="c">46,2%</td></tr><tr><td>Média histórica da liga</td><td class="c">46,2%</td></tr></tbody></table></div>
+<tr><td>Este modelo</td><td class="c"><b>48,7%</b></td></tr><tr><td>Escolher sempre o mandante</td><td class="c">46,2%</td></tr><tr><td>Média histórica da liga</td><td class="c">46,2%</td></tr></tbody></table></div>
 <p>Nos jogos em que o favorito tinha 60% ou mais, ele venceu em 66% das vezes. As probabilidades também se mostraram bem calibradas: quando o modelo diz 30%, o resultado acontece perto de 30% das vezes.</p></section>
 <section><h2>O que o modelo não faz</h2><ul>
 <li>Não sabe de lesões, suspensões, escalação reserva ou troca de técnico.</li>
 <li>Não usa a tabela, a sequência recente nem o confronto direto no cálculo. Esses dados aparecem nas páginas de jogo só como contexto.</li>
 <li>Não garante resultado. Nenhum modelo de futebol acerta perto de 90%; o empate acontece em cerca de 27% dos jogos e quase nunca é o resultado mais provável.</li>
-<li>Não é recomendação de aposta.</li></ul></section>
+<li>Não é recomendação de nenhum tipo: é uma estimativa estatística, com a incerteza que toda estimativa tem.</li></ul></section>
 <p><a href="./">← Ver as previsões</a></p>
 </main>`;
   return pagina({ titulo: `Como funciona o modelo | ${site.nome}`, descricao: "Metodologia do Placar Provável: modelo de Poisson com ajuste Dixon-Coles, gols esperados por ataque e defesa, e teste em 2.280 jogos do Brasileirão.", caminho: "como-funciona.html", raiz: "./", corpo, tipo: "article", jsonld: { "@context": "https://schema.org", ...ldMigalhas(itens) } });
