@@ -787,6 +787,176 @@
    },
    "registradoEm": "2026-10-30T22:35:12.224Z",
    "atualizadoEm": "2026-10-30T22:35:12.224Z"
+  },
+  {
+   "id": "jmvwnk7gm",
+   "data": "2026-11-02",
+   "liga": "Serie A",
+   "casa": "Bragantino SP",
+   "fora": "Santos SP",
+   "gc": null,
+   "gf": null,
+   "xgc": 1.67,
+   "xgf": 1.3,
+   "p1": 0.4562,
+   "px": 0.2506,
+   "p2": 0.2932,
+   "o25": 0.5719,
+   "bts": 0.5975,
+   "hora": "20:00",
+   "rodada": 34,
+   "ctx": {
+    "tc": {
+     "pos": 9,
+     "pts": 44,
+     "j": 33
+    },
+    "tf": {
+     "pos": 8,
+     "pts": 47,
+     "j": 33
+    },
+    "ref": {
+     "lider": 73,
+     "g4": 54,
+     "g6": 53,
+     "z4": 36,
+     "n": 20
+    },
+    "h2h": [
+     {
+      "d": "2026-05-10",
+      "c": "Santos SP",
+      "f": "Bragantino SP",
+      "gc": 2,
+      "gf": 0
+     },
+     {
+      "d": "2026-01-25",
+      "c": "Santos SP",
+      "f": "Bragantino SP",
+      "gc": 0,
+      "gf": 0
+     },
+     {
+      "d": "2025-09-28",
+      "c": "Bragantino SP",
+      "f": "Santos SP",
+      "gc": 2,
+      "gf": 2
+     },
+     {
+      "d": "2025-04-28",
+      "c": "Santos SP",
+      "f": "Bragantino SP",
+      "gc": 1,
+      "gf": 2
+     },
+     {
+      "d": "2025-03-02",
+      "c": "Santos SP",
+      "f": "Bragantino SP",
+      "gc": 2,
+      "gf": 0
+     }
+    ],
+    "uc": [
+     {
+      "d": "2026-10-28",
+      "adv": "Chapecoense SC",
+      "m": "c",
+      "gp": 3,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Palmeiras SP",
+      "m": "f",
+      "gp": 0,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-18",
+      "adv": "Remo PA",
+      "m": "f",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-13",
+      "adv": "Cruzeiro MG",
+      "m": "c",
+      "gp": 4,
+      "gs": 2,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-07",
+      "adv": "Mirassol SP",
+      "m": "c",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     }
+    ],
+    "uf": [
+     {
+      "d": "2026-10-28",
+      "adv": "Palmeiras SP",
+      "m": "c",
+      "gp": 0,
+      "gs": 0,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-25",
+      "adv": "Bahia BA",
+      "m": "c",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-18",
+      "adv": "Fluminense RJ",
+      "m": "f",
+      "gp": 2,
+      "gs": 1,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-11",
+      "adv": "Atletico MG",
+      "m": "f",
+      "gp": 1,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-08",
+      "adv": "Flamengo RJ",
+      "m": "c",
+      "gp": 2,
+      "gs": 2,
+      "r": "E"
+     }
+    ],
+    "cc": [
+     8,
+     3,
+     5
+    ],
+    "cf": [
+     6,
+     4,
+     6
+    ]
+   },
+   "registradoEm": "2026-10-31T17:05:54.118Z",
+   "atualizadoEm": "2026-10-31T17:05:54.118Z"
   }
  ],
  "atualizado": "2026-10-31"
