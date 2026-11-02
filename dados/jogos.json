@@ -624,8 +624,8 @@
    "liga": "Serie A",
    "casa": "Coritiba PR",
    "fora": "Vitoria BA",
-   "gc": null,
-   "gf": null,
+   "gc": 2,
+   "gf": 0,
    "xgc": 1.58,
    "xgf": 0.98,
    "p1": 0.5085,
@@ -786,7 +786,7 @@
     ]
    },
    "registradoEm": "2026-10-30T22:35:12.224Z",
-   "atualizadoEm": "2026-10-30T22:35:12.224Z"
+   "atualizadoEm": "2026-11-02T14:50:57.726Z"
   },
   {
    "id": "jmvwnk7gm",
@@ -959,5 +959,5 @@
    "atualizadoEm": "2026-10-31T17:05:54.118Z"
   }
  ],
- "atualizado": "2026-10-31"
+ "atualizado": "2026-11-02"
 }
