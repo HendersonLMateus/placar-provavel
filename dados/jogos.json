@@ -2,7 +2,7 @@
  "jogos": [
   {
    "id": "j1",
-   "data": "",
+   "data": "2026-10-17",
    "liga": "Serie A",
    "casa": "Atletico MG",
    "fora": "Coritiba PR",
@@ -964,8 +964,8 @@
    "liga": "Serie A",
    "casa": "Chapecoense SC",
    "fora": "Mirassol SP",
-   "gc": null,
-   "gf": null,
+   "gc": 1,
+   "gf": 2,
    "xgc": 1.33,
    "xgf": 1.55,
    "p1": 0.3209,
@@ -1126,7 +1126,7 @@
     ]
    },
    "registradoEm": "2026-11-03T12:53:55.985Z",
-   "atualizadoEm": "2026-11-03T12:53:55.985Z"
+   "atualizadoEm": "2026-11-04T15:31:35.353Z"
   },
   {
    "id": "jmw0ow3bt",
@@ -1134,8 +1134,8 @@
    "liga": "Serie A",
    "casa": "Internacional RS",
    "fora": "Coritiba PR",
-   "gc": null,
-   "gf": null,
+   "gc": 1,
+   "gf": 0,
    "xgc": 1.51,
    "xgf": 1.02,
    "p1": 0.4808,
@@ -1296,7 +1296,7 @@
     ]
    },
    "registradoEm": "2026-11-03T12:54:12.953Z",
-   "atualizadoEm": "2026-11-03T12:54:12.953Z"
+   "atualizadoEm": "2026-11-04T15:31:47.569Z"
   },
   {
    "id": "jmw0owhug",
@@ -2319,5 +2319,5 @@
    "atualizadoEm": "2026-11-03T12:57:08.953Z"
   }
  ],
- "atualizado": "2026-11-03"
+ "atualizado": "2026-11-04"
 }
