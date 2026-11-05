@@ -1304,8 +1304,8 @@
    "liga": "Serie A",
    "casa": "Atletico PR",
    "fora": "Vasco da Gama RJ",
-   "gc": null,
-   "gf": null,
+   "gc": 1,
+   "gf": 3,
    "xgc": 1.93,
    "xgf": 0.9,
    "p1": 0.6097,
@@ -1466,7 +1466,7 @@
     ]
    },
    "registradoEm": "2026-11-03T12:54:31.768Z",
-   "atualizadoEm": "2026-11-03T12:54:31.768Z"
+   "atualizadoEm": "2026-11-05T11:16:31.122Z"
   },
   {
    "id": "jmw0owtx4",
@@ -1474,8 +1474,8 @@
    "liga": "Serie A",
    "casa": "Flamengo RJ",
    "fora": "Gremio RS",
-   "gc": null,
-   "gf": null,
+   "gc": 3,
+   "gf": 1,
    "xgc": 2.13,
    "xgf": 0.51,
    "p1": 0.7473,
@@ -1636,7 +1636,7 @@
     ]
    },
    "registradoEm": "2026-11-03T12:54:47.416Z",
-   "atualizadoEm": "2026-11-03T12:54:47.416Z"
+   "atualizadoEm": "2026-11-05T11:16:41.995Z"
   },
   {
    "id": "jmw0ox6gg",
@@ -1644,8 +1644,8 @@
    "liga": "Serie A",
    "casa": "Botafogo RJ",
    "fora": "Atletico MG",
-   "gc": null,
-   "gf": null,
+   "gc": 1,
+   "gf": 0,
    "xgc": 1.39,
    "xgf": 1.33,
    "p1": 0.3783,
@@ -1806,7 +1806,7 @@
     ]
    },
    "registradoEm": "2026-11-03T12:55:03.664Z",
-   "atualizadoEm": "2026-11-03T12:55:03.664Z"
+   "atualizadoEm": "2026-11-05T11:16:56.994Z"
   },
   {
    "id": "jmw0oz4pc",
@@ -1814,8 +1814,8 @@
    "liga": "Serie A",
    "casa": "Sao Paulo SP",
    "fora": "Corinthians SP",
-   "gc": null,
-   "gf": null,
+   "gc": 0,
+   "gf": 0,
    "xgc": 1.44,
    "xgf": 0.81,
    "p1": 0.5138,
@@ -1976,7 +1976,7 @@
     ]
    },
    "registradoEm": "2026-11-03T12:56:34.704Z",
-   "atualizadoEm": "2026-11-03T12:56:34.704Z"
+   "atualizadoEm": "2026-11-05T11:17:12.290Z"
   },
   {
    "id": "jmw0ozk4n",
@@ -2319,5 +2319,5 @@
    "atualizadoEm": "2026-11-03T12:57:08.953Z"
   }
  ],
- "atualizado": "2026-11-04"
+ "atualizado": "2026-11-05"
 }
