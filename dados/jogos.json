@@ -2317,6 +2317,176 @@
    },
    "registradoEm": "2026-11-03T12:57:08.953Z",
    "atualizadoEm": "2026-11-03T12:57:08.953Z"
+  },
+  {
+   "id": "jmw3gh0c9",
+   "data": "2026-11-06",
+   "liga": "Serie A",
+   "casa": "Vitoria BA",
+   "fora": "Fluminense RJ",
+   "gc": null,
+   "gf": null,
+   "xgc": 1.32,
+   "xgf": 1.2,
+   "p1": 0.3872,
+   "px": 0.2806,
+   "p2": 0.3321,
+   "o25": 0.4626,
+   "bts": 0.5196,
+   "hora": "20:00",
+   "rodada": 34,
+   "ctx": {
+    "tc": {
+     "pos": 15,
+     "pts": 38,
+     "j": 33
+    },
+    "tf": {
+     "pos": 4,
+     "pts": 54,
+     "j": 33
+    },
+    "ref": {
+     "lider": 76,
+     "g4": 54,
+     "g6": 53,
+     "z4": 37,
+     "n": 20
+    },
+    "h2h": [
+     {
+      "d": "2026-05-09",
+      "c": "Fluminense RJ",
+      "f": "Vitoria BA",
+      "gc": 2,
+      "gf": 2
+     },
+     {
+      "d": "2025-09-20",
+      "c": "Vitoria BA",
+      "f": "Fluminense RJ",
+      "gc": 0,
+      "gf": 1
+     },
+     {
+      "d": "2025-04-20",
+      "c": "Fluminense RJ",
+      "f": "Vitoria BA",
+      "gc": 1,
+      "gf": 1
+     },
+     {
+      "d": "2024-10-26",
+      "c": "Vitoria BA",
+      "f": "Fluminense RJ",
+      "gc": 2,
+      "gf": 1
+     },
+     {
+      "d": "2024-06-27",
+      "c": "Fluminense RJ",
+      "f": "Vitoria BA",
+      "gc": 0,
+      "gf": 1
+     }
+    ],
+    "uc": [
+     {
+      "d": "2026-10-31",
+      "adv": "Coritiba PR",
+      "m": "f",
+      "gp": 0,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Atletico PR",
+      "m": "c",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-20",
+      "adv": "Corinthians SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-11",
+      "adv": "Sao Paulo SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-08",
+      "adv": "Chapecoense SC",
+      "m": "c",
+      "gp": 4,
+      "gs": 0,
+      "r": "V"
+     }
+    ],
+    "uf": [
+     {
+      "d": "2026-10-28",
+      "adv": "Internacional RS",
+      "m": "c",
+      "gp": 2,
+      "gs": 1,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Chapecoense SC",
+      "m": "f",
+      "gp": 1,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-22",
+      "adv": "Palmeiras SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-18",
+      "adv": "Santos SP",
+      "m": "c",
+      "gp": 1,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-15",
+      "adv": "Palmeiras SP",
+      "m": "c",
+      "gp": 1,
+      "gs": 2,
+      "r": "D"
+     }
+    ],
+    "cc": [
+     10,
+     2,
+     4
+    ],
+    "cf": [
+     3,
+     6,
+     7
+    ]
+   },
+   "registradoEm": "2026-11-05T11:21:50.841Z",
+   "atualizadoEm": "2026-11-05T11:21:50.841Z"
   }
  ],
  "atualizado": "2026-11-05"
