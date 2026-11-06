@@ -1984,8 +1984,8 @@
    "liga": "Serie A",
    "casa": "Palmeiras SP",
    "fora": "Remo PA",
-   "gc": null,
-   "gf": null,
+   "gc": 6,
+   "gf": 1,
    "xgc": 2.25,
    "xgf": 0.47,
    "p1": 0.777,
@@ -2146,7 +2146,7 @@
     ]
    },
    "registradoEm": "2026-11-03T12:56:54.695Z",
-   "atualizadoEm": "2026-11-03T12:56:54.695Z"
+   "atualizadoEm": "2026-11-06T16:33:36.970Z"
   },
   {
    "id": "jmw0ozv4p",
@@ -2154,8 +2154,8 @@
    "liga": "Serie A",
    "casa": "Cruzeiro MG",
    "fora": "Bahia BA",
-   "gc": null,
-   "gf": null,
+   "gc": 3,
+   "gf": 2,
    "xgc": 1.66,
    "xgf": 1.25,
    "p1": 0.4641,
@@ -2316,7 +2316,7 @@
     ]
    },
    "registradoEm": "2026-11-03T12:57:08.953Z",
-   "atualizadoEm": "2026-11-03T12:57:08.953Z"
+   "atualizadoEm": "2026-11-06T16:33:49.673Z"
   },
   {
    "id": "jmw3gh0c9",
@@ -2489,5 +2489,5 @@
    "atualizadoEm": "2026-11-05T11:21:50.841Z"
   }
  ],
- "atualizado": "2026-11-05"
+ "atualizado": "2026-11-06"
 }
