@@ -2324,8 +2324,8 @@
    "liga": "Serie A",
    "casa": "Vitoria BA",
    "fora": "Fluminense RJ",
-   "gc": null,
-   "gf": null,
+   "gc": 0,
+   "gf": 3,
    "xgc": 1.32,
    "xgf": 1.2,
    "p1": 0.3872,
@@ -2486,8 +2486,8 @@
     ]
    },
    "registradoEm": "2026-11-05T11:21:50.841Z",
-   "atualizadoEm": "2026-11-05T11:21:50.841Z"
+   "atualizadoEm": "2026-11-08T19:55:53.283Z"
   }
  ],
- "atualizado": "2026-11-06"
+ "atualizado": "2026-11-08"
 }
