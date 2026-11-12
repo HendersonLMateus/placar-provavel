@@ -581,7 +581,9 @@ escrever("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 ${urls.map((u) => `  <url><loc>${u.loc}</loc><lastmod>${u.mod}</lastmod><xhtml:link rel="alternate" hreflang="pt-BR" href="${absoluto(u.alt.pt)}"/><xhtml:link rel="alternate" hreflang="en" href="${absoluto(u.alt.en)}"/></url>`).join("\n")}
 </urlset>
 `);
+// Versão em texto (uma URL por linha), aceita pelo Google como alternativa ao XML
+escrever("sitemap.txt", urls.map((u) => u.loc).join("\n") + "\n");
 const prefixo = new URL(BASE + "/").pathname;
-escrever("robots.txt", `User-agent: *\nDisallow: ${prefixo}admin.html\n\nSitemap: ${BASE}/sitemap.xml\n`);
+escrever("robots.txt", `User-agent: *\nDisallow: ${prefixo}admin.html\n\nSitemap: ${BASE}/sitemap.xml\nSitemap: ${BASE}/sitemap.txt\n`);
 
 console.log(`Site gerado em _site/ (PT + EN): ${jogos.length} jogos (${jogos.filter(jogado).length} com resultado), ${times.length} times, ${rodadas.length} rodadas, ${urls.length} URLs no sitemap.`);
