@@ -2487,7 +2487,177 @@
    },
    "registradoEm": "2026-11-05T11:21:50.841Z",
    "atualizadoEm": "2026-11-08T19:55:53.283Z"
+  },
+  {
+   "id": "jmwdu3v8f",
+   "data": "2026-11-14",
+   "liga": "Serie A",
+   "casa": "Mirassol SP",
+   "fora": "Atletico MG",
+   "gc": null,
+   "gf": null,
+   "xgc": 1.18,
+   "xgf": 1.15,
+   "p1": 0.3597,
+   "px": 0.2951,
+   "p2": 0.3452,
+   "o25": 0.4104,
+   "bts": 0.4788,
+   "hora": "18:30",
+   "rodada": 21,
+   "ctx": {
+    "tc": {
+     "pos": 14,
+     "pts": 40,
+     "j": 34
+    },
+    "tf": {
+     "pos": 5,
+     "pts": 54,
+     "j": 34
+    },
+    "ref": {
+     "lider": 76,
+     "g4": 57,
+     "g6": 53,
+     "z4": 37,
+     "n": 20
+    },
+    "h2h": [
+     {
+      "d": "2026-05-16",
+      "c": "Atletico MG",
+      "f": "Mirassol SP",
+      "gc": 3,
+      "gf": 1
+     },
+     {
+      "d": "2025-09-28",
+      "c": "Atletico MG",
+      "f": "Mirassol SP",
+      "gc": 1,
+      "gf": 0
+     },
+     {
+      "d": "2025-04-26",
+      "c": "Mirassol SP",
+      "f": "Atletico MG",
+      "gc": 2,
+      "gf": 2
+     },
+     {
+      "d": "2026-11-03",
+      "c": "Chapecoense SC",
+      "f": "Mirassol SP",
+      "gc": 1,
+      "gf": 2
+     },
+     {
+      "d": "2026-10-30",
+      "c": "Corinthians SP",
+      "f": "Mirassol SP",
+      "gc": 2,
+      "gf": 0
+     }
+    ],
+    "uc": [
+     {
+      "d": "2026-11-03",
+      "adv": "Chapecoense SC",
+      "m": "f",
+      "gp": 2,
+      "gs": 1,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-30",
+      "adv": "Corinthians SP",
+      "m": "f",
+      "gp": 0,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Sao Paulo SP",
+      "m": "c",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-17",
+      "adv": "Internacional RS",
+      "m": "c",
+      "gp": 2,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-11",
+      "adv": "Bahia BA",
+      "m": "f",
+      "gp": 0,
+      "gs": 1,
+      "r": "D"
+     }
+    ],
+    "uf": [
+     {
+      "d": "2026-11-07",
+      "adv": "Gremio RS",
+      "m": "c",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-11-05",
+      "adv": "Botafogo RJ",
+      "m": "f",
+      "gp": 0,
+      "gs": 1,
+      "r": "D"
+     },
+     {
+      "d": "2026-11-01",
+      "adv": "Gremio RS",
+      "m": "f",
+      "gp": 0,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-29",
+      "adv": "Cruzeiro MG",
+      "m": "c",
+      "gp": 0,
+      "gs": 1,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-26",
+      "adv": "Flamengo RJ",
+      "m": "f",
+      "gp": 2,
+      "gs": 3,
+      "r": "D"
+     }
+    ],
+    "cc": [
+     7,
+     6,
+     4
+    ],
+    "cf": [
+     4,
+     3,
+     10
+    ]
+   },
+   "registradoEm": "2026-11-12T17:41:14.079Z",
+   "atualizadoEm": "2026-11-12T17:41:14.079Z"
   }
  ],
- "atualizado": "2026-11-08"
+ "atualizado": "2026-11-12"
 }
