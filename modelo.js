@@ -43,6 +43,12 @@ function ler(texto){
   out.lgH = depois(/^(Home Goals per Game|Gols [\s\S]m casa por partida)/i); out.lgA = depois(/^(Away Goals per Game|Gols visitante por partida)/i);
   var t = L.find(function(s){ return /^(Table|Classificação)\s+/i.test(s); }); if (t) out.liga = t.replace(/^(Table|Classificação)\s+/i, "");
   var d = texto.match(/\b(\d{2})\.(\d{2})\.(20\d{2})\b/); if (d) out.data = d[3] + "-" + d[2] + "-" + d[1];
+  // Estádio e cidade do mandante ("Stadium:" / "Estádio:" e "Home:" / "Em casa:"), usados nos dados estruturados do jogo
+  var depoisDe = function(rx){ var i = L.findIndex(function(s){ return rx.test(s); }); if (i < 0) return undefined;
+    var resto = L[i].replace(rx, "").trim(); if (resto) return resto;
+    for (var k = i + 1; k < Math.min(i + 3, L.length); k++) if (L[k]) return L[k]; };
+  var est = depoisDe(/^(Stadium|Estádio):/i); if (est && !/^(Capacity|Capacidade)/i.test(est)) out.estadio = est;
+  var cid = depoisDe(/^(Home|Em casa):/i); if (cid && !/^(Away|Visitante)/i.test(cid)) out.cidade = cid;
   ["casa","fora","cMarc","cSof","fMarc","fSof","cMarcCasa","cSofCasa","fMarcFora","fSofFora","lgH","lgA"].forEach(function(k){ if (out[k] === undefined) faltando.push(k); });
   // Data e hora no horário local do estádio. O Primatips mostra a data no fuso dele e a hora local entre parênteses
   // ("22:30 (19:30 horário local)"); jogos à noite no Brasil podem aparecer com a data do dia seguinte.
