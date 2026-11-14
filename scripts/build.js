@@ -282,14 +282,17 @@ function paginaJogo(j) {
   const itens = [{ nome: T("Início", "Home"), url: U.inicio() }];
   if (j.rodada) itens.push({ nome: T(`Rodada ${j.rodada}`, `Round ${j.rodada}`), url: U.rodada(liga, j.rodada) });
   itens.push({ nome: T(`${c} x ${f}`, `${c} vs ${f}`), url: alt[lg] });
-  const evento = {
+  // O Google exige o local para marcar um evento; sem estádio cadastrado, a página fica só com a trilha de navegação.
+  const evento = j.estadio ? {
     "@type": "SportsEvent", name: T(`${c} x ${f}`, `${c} vs ${f}`), sport: T("Futebol", "Football"), description: descricao, inLanguage: HTML_LANG[lg],
     ...(j.data ? { startDate: j.hora ? `${j.data}T${j.hora}:00-03:00` : j.data } : {}),
-    ...(jogado(j) ? {} : { eventStatus: "https://schema.org/EventScheduled" }),
+    ...(jogado(j) ? {} : { eventStatus: "https://schema.org/EventScheduled", eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode" }),
+    location: { "@type": "Place", name: j.estadio, address: { "@type": "PostalAddress", ...(j.cidade ? { addressLocality: j.cidade } : {}), addressCountry: "BR" } },
     homeTeam: { "@type": "SportsTeam", name: c, url: absoluto(U.time(c)) }, awayTeam: { "@type": "SportsTeam", name: f, url: absoluto(U.time(f)) },
-    superEvent: { "@type": "SportsEvent", name: liga }, url: absoluto(alt[lg])
-  };
-  const jsonld = { "@context": "https://schema.org", "@graph": [evento, ldMigalhas(itens)] };
+    competitor: [{ "@type": "SportsTeam", name: c }, { "@type": "SportsTeam", name: f }],
+    image: `${BASE}/og.png`, url: absoluto(alt[lg])
+  } : null;
+  const jsonld = { "@context": "https://schema.org", "@graph": evento ? [evento, ldMigalhas(itens)] : [ldMigalhas(itens)] };
   const lista = tops.map((p) => `<tr><td>${esc(c)} ${p.gc} x ${p.gf} ${esc(f)}</td><td class="c">${num(p.p * 100, 1)}%</td></tr>`).join("");
   const corpo = `<main class="artigo">
 ${migalhas(itens, raiz)}
