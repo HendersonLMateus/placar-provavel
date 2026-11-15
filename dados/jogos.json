@@ -2496,8 +2496,8 @@
    "fora": "Atletico MG",
    "estadio": "Maião",
    "cidade": "Mirassol",
-   "gc": null,
-   "gf": null,
+   "gc": 0,
+   "gf": 0,
    "xgc": 1.18,
    "xgf": 1.15,
    "p1": 0.3597,
@@ -2658,8 +2658,8 @@
     ]
    },
    "registradoEm": "2026-11-12T17:41:14.079Z",
-   "atualizadoEm": "2026-11-12T17:41:14.079Z"
+   "atualizadoEm": "2026-11-15T15:22:34.617Z"
   }
  ],
- "atualizado": "2026-11-12"
+ "atualizado": "2026-11-15"
 }
