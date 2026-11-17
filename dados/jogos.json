@@ -2659,7 +2659,1555 @@
    },
    "registradoEm": "2026-11-12T17:41:14.079Z",
    "atualizadoEm": "2026-11-15T15:22:34.617Z"
+  },
+  {
+   "id": "jmwkmd3kb",
+   "data": "2026-11-18",
+   "liga": "Serie A",
+   "casa": "Coritiba PR",
+   "fora": "Santos SP",
+   "gc": null,
+   "gf": null,
+   "xgc": 1.43,
+   "xgf": 1.58,
+   "p1": 0.3413,
+   "px": 0.2531,
+   "p2": 0.4055,
+   "o25": 0.5784,
+   "bts": 0.6091,
+   "hora": "19:30",
+   "rodada": 35,
+   "ctx": {
+    "tc": {
+     "pos": 13,
+     "pts": 42,
+     "j": 34
+    },
+    "tf": {
+     "pos": 9,
+     "pts": 47,
+     "j": 34
+    },
+    "ref": {
+     "lider": 76,
+     "g4": 57,
+     "g6": 53,
+     "z4": 37,
+     "n": 20
+    },
+    "h2h": [
+     {
+      "d": "2026-05-17",
+      "c": "Santos SP",
+      "f": "Coritiba PR",
+      "gc": 0,
+      "gf": 3
+     },
+     {
+      "d": "2026-05-13",
+      "c": "Coritiba PR",
+      "f": "Santos SP",
+      "gc": 0,
+      "gf": 2
+     },
+     {
+      "d": "2026-04-22",
+      "c": "Santos SP",
+      "f": "Coritiba PR",
+      "gc": 0,
+      "gf": 0
+     },
+     {
+      "d": "2025-03-16",
+      "c": "Coritiba PR",
+      "f": "Santos SP",
+      "gc": 1,
+      "gf": 4
+     },
+     {
+      "d": "2024-11-12",
+      "c": "Coritiba PR",
+      "f": "Santos SP",
+      "gc": 0,
+      "gf": 2
+     }
+    ],
+    "uc": [
+     {
+      "d": "2026-11-04",
+      "adv": "Internacional RS",
+      "m": "f",
+      "gp": 0,
+      "gs": 1,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-31",
+      "adv": "Vitoria BA",
+      "m": "c",
+      "gp": 2,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-26",
+      "adv": "Gremio RS",
+      "m": "c",
+      "gp": 0,
+      "gs": 1,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-17",
+      "adv": "Atletico MG",
+      "m": "f",
+      "gp": 0,
+      "gs": 1,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-12",
+      "adv": "Botafogo RJ",
+      "m": "c",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     }
+    ],
+    "uf": [
+     {
+      "d": "2026-11-02",
+      "adv": "Bragantino SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-28",
+      "adv": "Palmeiras SP",
+      "m": "c",
+      "gp": 0,
+      "gs": 0,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-25",
+      "adv": "Bahia BA",
+      "m": "c",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-18",
+      "adv": "Fluminense RJ",
+      "m": "f",
+      "gp": 2,
+      "gs": 1,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-11",
+      "adv": "Atletico MG",
+      "m": "f",
+      "gp": 1,
+      "gs": 2,
+      "r": "D"
+     }
+    ],
+    "cc": [
+     6,
+     5,
+     6
+    ],
+    "cf": [
+     6,
+     4,
+     7
+    ]
+   },
+   "estadio": "Couto Pereira",
+   "cidade": "Curitiba",
+   "registradoEm": "2026-11-17T11:38:51.083Z",
+   "atualizadoEm": "2026-11-17T11:38:51.083Z"
+  },
+  {
+   "id": "jmwkmeehl",
+   "data": "2026-11-18",
+   "liga": "Serie A",
+   "casa": "Remo PA",
+   "fora": "Chapecoense SC",
+   "gc": null,
+   "gf": null,
+   "xgc": 1.76,
+   "xgf": 0.89,
+   "p1": 0.5743,
+   "px": 0.2437,
+   "p2": 0.1821,
+   "o25": 0.4953,
+   "bts": 0.4944,
+   "hora": "20:00",
+   "rodada": 35,
+   "ctx": {
+    "tc": {
+     "pos": 19,
+     "pts": 29,
+     "j": 34
+    },
+    "tf": {
+     "pos": 20,
+     "pts": 21,
+     "j": 34
+    },
+    "ref": {
+     "lider": 76,
+     "g4": 57,
+     "g6": 53,
+     "z4": 37,
+     "n": 20
+    },
+    "h2h": [
+     {
+      "d": "2026-05-17",
+      "c": "Chapecoense SC",
+      "f": "Remo PA",
+      "gc": 2,
+      "gf": 3
+     },
+     {
+      "d": "2025-11-02",
+      "c": "Remo PA",
+      "f": "Chapecoense SC",
+      "gc": 1,
+      "gf": 1
+     },
+     {
+      "d": "2025-07-13",
+      "c": "Chapecoense SC",
+      "f": "Remo PA",
+      "gc": 1,
+      "gf": 1
+     },
+     {
+      "d": "2026-11-05",
+      "c": "Palmeiras SP",
+      "f": "Remo PA",
+      "gc": 6,
+      "gf": 1
+     },
+     {
+      "d": "2026-10-29",
+      "c": "Remo PA",
+      "f": "Botafogo RJ",
+      "gc": 2,
+      "gf": 1
+     }
+    ],
+    "uc": [
+     {
+      "d": "2026-11-05",
+      "adv": "Palmeiras SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 6,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-29",
+      "adv": "Botafogo RJ",
+      "m": "c",
+      "gp": 2,
+      "gs": 1,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Cruzeiro MG",
+      "m": "f",
+      "gp": 0,
+      "gs": 1,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-18",
+      "adv": "Bragantino SP",
+      "m": "c",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-10",
+      "adv": "Vasco da Gama RJ",
+      "m": "f",
+      "gp": 0,
+      "gs": 0,
+      "r": "E"
+     }
+    ],
+    "uf": [
+     {
+      "d": "2026-11-14",
+      "adv": "Vasco da Gama RJ",
+      "m": "c",
+      "gp": 0,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-11-03",
+      "adv": "Mirassol SP",
+      "m": "c",
+      "gp": 1,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-28",
+      "adv": "Bragantino SP",
+      "m": "f",
+      "gp": 0,
+      "gs": 3,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Fluminense RJ",
+      "m": "c",
+      "gp": 2,
+      "gs": 1,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-17",
+      "adv": "Botafogo RJ",
+      "m": "f",
+      "gp": 0,
+      "gs": 1,
+      "r": "D"
+     }
+    ],
+    "cc": [
+     4,
+     7,
+     6
+    ],
+    "cf": [
+     1,
+     4,
+     12
+    ]
+   },
+   "estadio": "Mangueirão",
+   "cidade": "Belem",
+   "registradoEm": "2026-11-17T11:39:51.897Z",
+   "atualizadoEm": "2026-11-17T11:39:51.897Z"
+  },
+  {
+   "id": "jmwkmevw8",
+   "data": "2026-11-18",
+   "liga": "Serie A",
+   "casa": "Cruzeiro MG",
+   "fora": "Palmeiras SP",
+   "gc": null,
+   "gf": null,
+   "xgc": 0.88,
+   "xgf": 1.54,
+   "p1": 0.2106,
+   "px": 0.2693,
+   "p2": 0.52,
+   "o25": 0.436,
+   "bts": 0.467,
+   "hora": "20:30",
+   "rodada": 35,
+   "ctx": {
+    "tc": {
+     "pos": 3,
+     "pts": 60,
+     "j": 34
+    },
+    "tf": {
+     "pos": 2,
+     "pts": 73,
+     "j": 34
+    },
+    "ref": {
+     "lider": 76,
+     "g4": 57,
+     "g6": 53,
+     "z4": 37,
+     "n": 20
+    },
+    "h2h": [
+     {
+      "d": "2026-05-17",
+      "c": "Palmeiras SP",
+      "f": "Cruzeiro MG",
+      "gc": 1,
+      "gf": 1
+     },
+     {
+      "d": "2025-10-26",
+      "c": "Palmeiras SP",
+      "f": "Cruzeiro MG",
+      "gc": 0,
+      "gf": 0
+     },
+     {
+      "d": "2025-06-01",
+      "c": "Cruzeiro MG",
+      "f": "Palmeiras SP",
+      "gc": 2,
+      "gf": 1
+     },
+     {
+      "d": "2024-12-05",
+      "c": "Cruzeiro MG",
+      "f": "Palmeiras SP",
+      "gc": 1,
+      "gf": 2
+     },
+     {
+      "d": "2024-07-21",
+      "c": "Palmeiras SP",
+      "f": "Cruzeiro MG",
+      "gc": 2,
+      "gf": 0
+     }
+    ],
+    "uc": [
+     {
+      "d": "2026-11-06",
+      "adv": "Bahia BA",
+      "m": "c",
+      "gp": 3,
+      "gs": 2,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-29",
+      "adv": "Atletico MG",
+      "m": "f",
+      "gp": 1,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Remo PA",
+      "m": "c",
+      "gp": 1,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-18",
+      "adv": "Gremio RS",
+      "m": "f",
+      "gp": 4,
+      "gs": 2,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-13",
+      "adv": "Bragantino SP",
+      "m": "f",
+      "gp": 2,
+      "gs": 4,
+      "r": "D"
+     }
+    ],
+    "uf": [
+     {
+      "d": "2026-11-08",
+      "adv": "Vasco da Gama RJ",
+      "m": "f",
+      "gp": 1,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-11-05",
+      "adv": "Remo PA",
+      "m": "c",
+      "gp": 6,
+      "gs": 1,
+      "r": "V"
+     },
+     {
+      "d": "2026-11-01",
+      "adv": "Vasco da Gama RJ",
+      "m": "c",
+      "gp": 1,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-28",
+      "adv": "Santos SP",
+      "m": "f",
+      "gp": 0,
+      "gs": 0,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Bragantino SP",
+      "m": "c",
+      "gp": 2,
+      "gs": 0,
+      "r": "V"
+     }
+    ],
+    "cc": [
+     10,
+     4,
+     3
+    ],
+    "cf": [
+     8,
+     7,
+     2
+    ]
+   },
+   "estadio": "Mineirao",
+   "cidade": "Belo Horizonte",
+   "registradoEm": "2026-11-17T11:40:14.456Z",
+   "atualizadoEm": "2026-11-17T11:40:14.456Z"
+  },
+  {
+   "id": "jmwkmfcqv",
+   "data": "2026-11-18",
+   "liga": "Serie A",
+   "casa": "Flamengo RJ",
+   "fora": "Atletico PR",
+   "gc": null,
+   "gf": null,
+   "xgc": 2.13,
+   "xgf": 0.86,
+   "p1": 0.6605,
+   "px": 0.2037,
+   "p2": 0.1359,
+   "o25": 0.5745,
+   "bts": 0.5133,
+   "hora": "20:30",
+   "rodada": 35,
+   "ctx": {
+    "tc": {
+     "pos": 1,
+     "pts": 76,
+     "j": 34
+    },
+    "tf": {
+     "pos": 5,
+     "pts": 54,
+     "j": 34
+    },
+    "ref": {
+     "lider": 76,
+     "g4": 57,
+     "g6": 53,
+     "z4": 37,
+     "n": 20
+    },
+    "h2h": [
+     {
+      "d": "2026-05-17",
+      "c": "Atletico PR",
+      "f": "Flamengo RJ",
+      "gc": 1,
+      "gf": 1
+     },
+     {
+      "d": "2024-09-30",
+      "c": "Flamengo RJ",
+      "f": "Atletico PR",
+      "gc": 1,
+      "gf": 0
+     },
+     {
+      "d": "2024-06-16",
+      "c": "Atletico PR",
+      "f": "Flamengo RJ",
+      "gc": 1,
+      "gf": 1
+     },
+     {
+      "d": "2023-09-14",
+      "c": "Flamengo RJ",
+      "f": "Atletico PR",
+      "gc": 0,
+      "gf": 3
+     },
+     {
+      "d": "2023-07-13",
+      "c": "Atletico PR",
+      "f": "Flamengo RJ",
+      "gc": 0,
+      "gf": 2
+     }
+    ],
+    "uc": [
+     {
+      "d": "2026-11-04",
+      "adv": "Gremio RS",
+      "m": "c",
+      "gp": 3,
+      "gs": 1,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-29",
+      "adv": "Vasco da Gama RJ",
+      "m": "f",
+      "gp": 4,
+      "gs": 1,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-26",
+      "adv": "Atletico MG",
+      "m": "c",
+      "gp": 3,
+      "gs": 2,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-23",
+      "adv": "Estudiantes LP",
+      "m": "c",
+      "gp": 0,
+      "gs": 0,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-18",
+      "adv": "Bahia BA",
+      "m": "f",
+      "gp": 3,
+      "gs": 0,
+      "r": "V"
+     }
+    ],
+    "uf": [
+     {
+      "d": "2026-11-04",
+      "adv": "Vasco da Gama RJ",
+      "m": "c",
+      "gp": 1,
+      "gs": 3,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-30",
+      "adv": "Gremio RS",
+      "m": "f",
+      "gp": 0,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Vitoria BA",
+      "m": "f",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-17",
+      "adv": "Palmeiras SP",
+      "m": "c",
+      "gp": 0,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-12",
+      "adv": "Chapecoense SC",
+      "m": "f",
+      "gp": 4,
+      "gs": 1,
+      "r": "V"
+     }
+    ],
+    "cc": [
+     13,
+     3,
+     1
+    ],
+    "cf": [
+     6,
+     4,
+     7
+    ]
+   },
+   "estadio": "Maracana",
+   "cidade": "Rio de Janeiro",
+   "registradoEm": "2026-11-17T11:40:36.295Z",
+   "atualizadoEm": "2026-11-17T11:40:36.295Z"
+  },
+  {
+   "id": "jmwkmg1n9",
+   "data": "2026-11-18",
+   "liga": "Serie A",
+   "casa": "Corinthians SP",
+   "fora": "Botafogo RJ",
+   "gc": null,
+   "gf": null,
+   "xgc": 1.35,
+   "xgf": 1.03,
+   "p1": 0.4331,
+   "px": 0.2868,
+   "p2": 0.2801,
+   "o25": 0.424,
+   "bts": 0.4821,
+   "hora": "21:30",
+   "rodada": 35,
+   "ctx": {
+    "tc": {
+     "pos": 17,
+     "pts": 37,
+     "j": 34
+    },
+    "tf": {
+     "pos": 12,
+     "pts": 42,
+     "j": 34
+    },
+    "ref": {
+     "lider": 76,
+     "g4": 57,
+     "g6": 53,
+     "z4": 37,
+     "n": 20
+    },
+    "h2h": [
+     {
+      "d": "2026-05-17",
+      "c": "Botafogo RJ",
+      "f": "Corinthians SP",
+      "gc": 3,
+      "gf": 1
+     },
+     {
+      "d": "2025-11-30",
+      "c": "Corinthians SP",
+      "f": "Botafogo RJ",
+      "gc": 2,
+      "gf": 2
+     },
+     {
+      "d": "2025-07-26",
+      "c": "Botafogo RJ",
+      "f": "Corinthians SP",
+      "gc": 1,
+      "gf": 1
+     },
+     {
+      "d": "2024-09-15",
+      "c": "Botafogo RJ",
+      "f": "Corinthians SP",
+      "gc": 2,
+      "gf": 1
+     },
+     {
+      "d": "2024-06-02",
+      "c": "Corinthians SP",
+      "f": "Botafogo RJ",
+      "gc": 0,
+      "gf": 1
+     }
+    ],
+    "uc": [
+     {
+      "d": "2026-11-05",
+      "adv": "Sao Paulo SP",
+      "m": "f",
+      "gp": 0,
+      "gs": 0,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-30",
+      "adv": "Mirassol SP",
+      "m": "c",
+      "gp": 2,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Vasco da Gama RJ",
+      "m": "f",
+      "gp": 2,
+      "gs": 3,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-20",
+      "adv": "Vitoria BA",
+      "m": "c",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-11",
+      "adv": "Palmeiras SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 4,
+      "r": "D"
+     }
+    ],
+    "uf": [
+     {
+      "d": "2026-11-05",
+      "adv": "Atletico MG",
+      "m": "c",
+      "gp": 1,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-29",
+      "adv": "Remo PA",
+      "m": "f",
+      "gp": 1,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Internacional RS",
+      "m": "f",
+      "gp": 0,
+      "gs": 3,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-17",
+      "adv": "Chapecoense SC",
+      "m": "c",
+      "gp": 1,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-12",
+      "adv": "Coritiba PR",
+      "m": "f",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     }
+    ],
+    "cc": [
+     6,
+     4,
+     7
+    ],
+    "cf": [
+     4,
+     3,
+     10
+    ]
+   },
+   "estadio": "Arena Corinthians",
+   "cidade": "Sao Paulo",
+   "registradoEm": "2026-11-17T11:41:08.565Z",
+   "atualizadoEm": "2026-11-17T11:41:08.565Z"
+  },
+  {
+   "id": "jmwkmgnfx",
+   "data": "2026-11-18",
+   "liga": "Serie A",
+   "casa": "Gremio RS",
+   "fora": "Bahia BA",
+   "gc": null,
+   "gf": null,
+   "xgc": 1.43,
+   "xgf": 1.42,
+   "p1": 0.372,
+   "px": 0.2617,
+   "p2": 0.3663,
+   "o25": 0.5438,
+   "bts": 0.5838,
+   "hora": "21:30",
+   "rodada": 35,
+   "ctx": {
+    "tc": {
+     "pos": 18,
+     "pts": 37,
+     "j": 34
+    },
+    "tf": {
+     "pos": 6,
+     "pts": 53,
+     "j": 34
+    },
+    "ref": {
+     "lider": 76,
+     "g4": 57,
+     "g6": 53,
+     "z4": 37,
+     "n": 20
+    },
+    "h2h": [
+     {
+      "d": "2026-05-17",
+      "c": "Bahia BA",
+      "f": "Gremio RS",
+      "gc": 1,
+      "gf": 1
+     },
+     {
+      "d": "2025-10-20",
+      "c": "Bahia BA",
+      "f": "Gremio RS",
+      "gc": 4,
+      "gf": 0
+     },
+     {
+      "d": "2025-05-25",
+      "c": "Gremio RS",
+      "f": "Bahia BA",
+      "gc": 1,
+      "gf": 0
+     },
+     {
+      "d": "2024-08-17",
+      "c": "Gremio RS",
+      "f": "Bahia BA",
+      "gc": 0,
+      "gf": 2
+     },
+     {
+      "d": "2024-04-28",
+      "c": "Bahia BA",
+      "f": "Gremio RS",
+      "gc": 1,
+      "gf": 0
+     }
+    ],
+    "uc": [
+     {
+      "d": "2026-11-07",
+      "adv": "Atletico MG",
+      "m": "f",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-11-04",
+      "adv": "Flamengo RJ",
+      "m": "f",
+      "gp": 1,
+      "gs": 3,
+      "r": "D"
+     },
+     {
+      "d": "2026-11-01",
+      "adv": "Atletico MG",
+      "m": "c",
+      "gp": 2,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-30",
+      "adv": "Atletico PR",
+      "m": "c",
+      "gp": 2,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-26",
+      "adv": "Coritiba PR",
+      "m": "f",
+      "gp": 1,
+      "gs": 0,
+      "r": "V"
+     }
+    ],
+    "uf": [
+     {
+      "d": "2026-11-06",
+      "adv": "Cruzeiro MG",
+      "m": "f",
+      "gp": 2,
+      "gs": 3,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-29",
+      "adv": "Sao Paulo SP",
+      "m": "c",
+      "gp": 3,
+      "gs": 2,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-25",
+      "adv": "Santos SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-18",
+      "adv": "Flamengo RJ",
+      "m": "c",
+      "gp": 0,
+      "gs": 3,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-11",
+      "adv": "Mirassol SP",
+      "m": "c",
+      "gp": 1,
+      "gs": 0,
+      "r": "V"
+     }
+    ],
+    "cc": [
+     8,
+     5,
+     4
+    ],
+    "cf": [
+     6,
+     5,
+     6
+    ]
+   },
+   "estadio": "Gremio Arena",
+   "cidade": "Porto Alegre",
+   "registradoEm": "2026-11-17T11:41:36.813Z",
+   "atualizadoEm": "2026-11-17T11:41:36.813Z"
+  },
+  {
+   "id": "jmwkmh7m3",
+   "data": "2026-11-19",
+   "liga": "Serie A",
+   "casa": "Vasco da Gama RJ",
+   "fora": "Internacional RS",
+   "gc": null,
+   "gf": null,
+   "xgc": 1.41,
+   "xgf": 1.11,
+   "p1": 0.4327,
+   "px": 0.2773,
+   "p2": 0.2901,
+   "o25": 0.4629,
+   "bts": 0.5143,
+   "hora": "19:30",
+   "rodada": 35,
+   "ctx": {
+    "tc": {
+     "pos": 11,
+     "pts": 44,
+     "j": 34
+    },
+    "tf": {
+     "pos": 16,
+     "pts": 38,
+     "j": 34
+    },
+    "ref": {
+     "lider": 76,
+     "g4": 57,
+     "g6": 53,
+     "z4": 37,
+     "n": 20
+    },
+    "h2h": [
+     {
+      "d": "2026-05-16",
+      "c": "Internacional RS",
+      "f": "Vasco da Gama RJ",
+      "gc": 4,
+      "gf": 1
+     },
+     {
+      "d": "2025-11-28",
+      "c": "Vasco da Gama RJ",
+      "f": "Internacional RS",
+      "gc": 5,
+      "gf": 1
+     },
+     {
+      "d": "2025-07-27",
+      "c": "Internacional RS",
+      "f": "Vasco da Gama RJ",
+      "gc": 1,
+      "gf": 1
+     },
+     {
+      "d": "2024-11-21",
+      "c": "Vasco da Gama RJ",
+      "f": "Internacional RS",
+      "gc": 0,
+      "gf": 1
+     },
+     {
+      "d": "2024-07-07",
+      "c": "Internacional RS",
+      "f": "Vasco da Gama RJ",
+      "gc": 1,
+      "gf": 2
+     }
+    ],
+    "uc": [
+     {
+      "d": "2026-11-14",
+      "adv": "Chapecoense SC",
+      "m": "f",
+      "gp": 2,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-11-08",
+      "adv": "Palmeiras SP",
+      "m": "c",
+      "gp": 2,
+      "gs": 1,
+      "r": "V"
+     },
+     {
+      "d": "2026-11-04",
+      "adv": "Atletico PR",
+      "m": "f",
+      "gp": 3,
+      "gs": 1,
+      "r": "V"
+     },
+     {
+      "d": "2026-11-01",
+      "adv": "Palmeiras SP",
+      "m": "f",
+      "gp": 0,
+      "gs": 1,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-29",
+      "adv": "Flamengo RJ",
+      "m": "c",
+      "gp": 1,
+      "gs": 4,
+      "r": "D"
+     }
+    ],
+    "uf": [
+     {
+      "d": "2026-11-04",
+      "adv": "Coritiba PR",
+      "m": "c",
+      "gp": 1,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-28",
+      "adv": "Fluminense RJ",
+      "m": "f",
+      "gp": 1,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Botafogo RJ",
+      "m": "c",
+      "gp": 3,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-17",
+      "adv": "Mirassol SP",
+      "m": "f",
+      "gp": 0,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-11",
+      "adv": "Gremio RS",
+      "m": "f",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     }
+    ],
+    "cc": [
+     8,
+     3,
+     6
+    ],
+    "cf": [
+     3,
+     6,
+     8
+    ]
+   },
+   "estadio": "Sao Januario",
+   "cidade": "Rio de Janeiro",
+   "registradoEm": "2026-11-17T11:42:02.955Z",
+   "atualizadoEm": "2026-11-17T11:42:02.955Z"
+  },
+  {
+   "id": "jmwkmho7u",
+   "data": "2026-11-19",
+   "liga": "Serie A",
+   "casa": "Vitoria BA",
+   "fora": "Bragantino SP",
+   "gc": null,
+   "gf": null,
+   "xgc": 1.06,
+   "xgf": 0.98,
+   "p1": 0.3607,
+   "px": 0.3177,
+   "p2": 0.3216,
+   "o25": 0.3351,
+   "bts": 0.4159,
+   "hora": "19:30",
+   "rodada": 35,
+   "ctx": {
+    "tc": {
+     "pos": 15,
+     "pts": 38,
+     "j": 34
+    },
+    "tf": {
+     "pos": 8,
+     "pts": 47,
+     "j": 34
+    },
+    "ref": {
+     "lider": 76,
+     "g4": 57,
+     "g6": 53,
+     "z4": 37,
+     "n": 20
+    },
+    "h2h": [
+     {
+      "d": "2026-05-17",
+      "c": "Bragantino SP",
+      "f": "Vitoria BA",
+      "gc": 2,
+      "gf": 0
+     },
+     {
+      "d": "2025-12-03",
+      "c": "Bragantino SP",
+      "f": "Vitoria BA",
+      "gc": 4,
+      "gf": 0
+     },
+     {
+      "d": "2025-07-20",
+      "c": "Vitoria BA",
+      "f": "Bragantino SP",
+      "gc": 1,
+      "gf": 0
+     },
+     {
+      "d": "2024-10-19",
+      "c": "Vitoria BA",
+      "f": "Bragantino SP",
+      "gc": 1,
+      "gf": 0
+     },
+     {
+      "d": "2024-06-23",
+      "c": "Bragantino SP",
+      "f": "Vitoria BA",
+      "gc": 2,
+      "gf": 1
+     }
+    ],
+    "uc": [
+     {
+      "d": "2026-11-06",
+      "adv": "Fluminense RJ",
+      "m": "c",
+      "gp": 0,
+      "gs": 3,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-31",
+      "adv": "Coritiba PR",
+      "m": "f",
+      "gp": 0,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Atletico PR",
+      "m": "c",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-20",
+      "adv": "Corinthians SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-11",
+      "adv": "Sao Paulo SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 2,
+      "r": "D"
+     }
+    ],
+    "uf": [
+     {
+      "d": "2026-11-02",
+      "adv": "Santos SP",
+      "m": "c",
+      "gp": 2,
+      "gs": 1,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-28",
+      "adv": "Chapecoense SC",
+      "m": "c",
+      "gp": 3,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Palmeiras SP",
+      "m": "f",
+      "gp": 0,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-18",
+      "adv": "Remo PA",
+      "m": "f",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-13",
+      "adv": "Cruzeiro MG",
+      "m": "c",
+      "gp": 4,
+      "gs": 2,
+      "r": "V"
+     }
+    ],
+    "cc": [
+     10,
+     2,
+     5
+    ],
+    "cf": [
+     4,
+     5,
+     8
+    ]
+   },
+   "estadio": "Barradao",
+   "cidade": "Salvador",
+   "registradoEm": "2026-11-17T11:42:24.474Z",
+   "atualizadoEm": "2026-11-17T11:42:24.474Z"
+  },
+  {
+   "id": "jmwkmhygq",
+   "data": "2026-11-19",
+   "liga": "Serie A",
+   "casa": "Sao Paulo SP",
+   "fora": "Fluminense RJ",
+   "gc": null,
+   "gf": null,
+   "xgc": 1.32,
+   "xgf": 1.07,
+   "p1": 0.4178,
+   "px": 0.2873,
+   "p2": 0.2949,
+   "o25": 0.4282,
+   "bts": 0.4883,
+   "hora": "21:30",
+   "rodada": 35,
+   "ctx": {
+    "tc": {
+     "pos": 10,
+     "pts": 44,
+     "j": 34
+    },
+    "tf": {
+     "pos": 4,
+     "pts": 57,
+     "j": 34
+    },
+    "ref": {
+     "lider": 76,
+     "g4": 57,
+     "g6": 53,
+     "z4": 37,
+     "n": 20
+    },
+    "h2h": [
+     {
+      "d": "2026-05-16",
+      "c": "Fluminense RJ",
+      "f": "Sao Paulo SP",
+      "gc": 2,
+      "gf": 1
+     },
+     {
+      "d": "2025-11-27",
+      "c": "Fluminense RJ",
+      "f": "Sao Paulo SP",
+      "gc": 6,
+      "gf": 0
+     },
+     {
+      "d": "2025-07-27",
+      "c": "Sao Paulo SP",
+      "f": "Fluminense RJ",
+      "gc": 3,
+      "gf": 1
+     },
+     {
+      "d": "2024-09-01",
+      "c": "Fluminense RJ",
+      "f": "Sao Paulo SP",
+      "gc": 2,
+      "gf": 0
+     },
+     {
+      "d": "2024-05-14",
+      "c": "Sao Paulo SP",
+      "f": "Fluminense RJ",
+      "gc": 2,
+      "gf": 1
+     }
+    ],
+    "uc": [
+     {
+      "d": "2026-11-05",
+      "adv": "Corinthians SP",
+      "m": "c",
+      "gp": 0,
+      "gs": 0,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-29",
+      "adv": "Bahia BA",
+      "m": "f",
+      "gp": 2,
+      "gs": 3,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Mirassol SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-18",
+      "adv": "Vasco da Gama RJ",
+      "m": "c",
+      "gp": 1,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-11",
+      "adv": "Vitoria BA",
+      "m": "c",
+      "gp": 2,
+      "gs": 1,
+      "r": "V"
+     }
+    ],
+    "uf": [
+     {
+      "d": "2026-11-06",
+      "adv": "Vitoria BA",
+      "m": "f",
+      "gp": 3,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-28",
+      "adv": "Internacional RS",
+      "m": "c",
+      "gp": 2,
+      "gs": 1,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Chapecoense SC",
+      "m": "f",
+      "gp": 1,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-22",
+      "adv": "Palmeiras SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-18",
+      "adv": "Santos SP",
+      "m": "c",
+      "gp": 1,
+      "gs": 2,
+      "r": "D"
+     }
+    ],
+    "cc": [
+     10,
+     4,
+     3
+    ],
+    "cf": [
+     4,
+     6,
+     7
+    ]
+   },
+   "estadio": "Morumbi",
+   "cidade": "Sao Paulo",
+   "registradoEm": "2026-11-17T11:42:37.754Z",
+   "atualizadoEm": "2026-11-17T11:42:37.754Z"
   }
  ],
- "atualizado": "2026-11-15"
+ "atualizado": "2026-11-17"
 }
