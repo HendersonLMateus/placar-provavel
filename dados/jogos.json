@@ -2666,8 +2666,8 @@
    "liga": "Serie A",
    "casa": "Coritiba PR",
    "fora": "Santos SP",
-   "gc": null,
-   "gf": null,
+   "gc": 0,
+   "gf": 1,
    "xgc": 1.43,
    "xgf": 1.58,
    "p1": 0.3413,
@@ -2830,7 +2830,7 @@
    "estadio": "Couto Pereira",
    "cidade": "Curitiba",
    "registradoEm": "2026-11-17T11:38:51.083Z",
-   "atualizadoEm": "2026-11-17T11:38:51.083Z"
+   "atualizadoEm": "2026-11-19T13:48:49.866Z"
   },
   {
    "id": "jmwkmeehl",
@@ -2838,8 +2838,8 @@
    "liga": "Serie A",
    "casa": "Remo PA",
    "fora": "Chapecoense SC",
-   "gc": null,
-   "gf": null,
+   "gc": 2,
+   "gf": 0,
    "xgc": 1.76,
    "xgf": 0.89,
    "p1": 0.5743,
@@ -3002,7 +3002,7 @@
    "estadio": "Mangueirão",
    "cidade": "Belem",
    "registradoEm": "2026-11-17T11:39:51.897Z",
-   "atualizadoEm": "2026-11-17T11:39:51.897Z"
+   "atualizadoEm": "2026-11-19T13:49:09.369Z"
   },
   {
    "id": "jmwkmevw8",
@@ -3010,8 +3010,8 @@
    "liga": "Serie A",
    "casa": "Cruzeiro MG",
    "fora": "Palmeiras SP",
-   "gc": null,
-   "gf": null,
+   "gc": 2,
+   "gf": 1,
    "xgc": 0.88,
    "xgf": 1.54,
    "p1": 0.2106,
@@ -3174,7 +3174,7 @@
    "estadio": "Mineirao",
    "cidade": "Belo Horizonte",
    "registradoEm": "2026-11-17T11:40:14.456Z",
-   "atualizadoEm": "2026-11-17T11:40:14.456Z"
+   "atualizadoEm": "2026-11-19T13:49:21.897Z"
   },
   {
    "id": "jmwkmfcqv",
@@ -3182,8 +3182,8 @@
    "liga": "Serie A",
    "casa": "Flamengo RJ",
    "fora": "Atletico PR",
-   "gc": null,
-   "gf": null,
+   "gc": 2,
+   "gf": 1,
    "xgc": 2.13,
    "xgf": 0.86,
    "p1": 0.6605,
@@ -3346,7 +3346,7 @@
    "estadio": "Maracana",
    "cidade": "Rio de Janeiro",
    "registradoEm": "2026-11-17T11:40:36.295Z",
-   "atualizadoEm": "2026-11-17T11:40:36.295Z"
+   "atualizadoEm": "2026-11-19T13:49:29.136Z"
   },
   {
    "id": "jmwkmg1n9",
@@ -3354,8 +3354,8 @@
    "liga": "Serie A",
    "casa": "Corinthians SP",
    "fora": "Botafogo RJ",
-   "gc": null,
-   "gf": null,
+   "gc": 4,
+   "gf": 0,
    "xgc": 1.35,
    "xgf": 1.03,
    "p1": 0.4331,
@@ -3518,7 +3518,7 @@
    "estadio": "Arena Corinthians",
    "cidade": "Sao Paulo",
    "registradoEm": "2026-11-17T11:41:08.565Z",
-   "atualizadoEm": "2026-11-17T11:41:08.565Z"
+   "atualizadoEm": "2026-11-19T13:50:02.480Z"
   },
   {
    "id": "jmwkmgnfx",
@@ -3526,8 +3526,8 @@
    "liga": "Serie A",
    "casa": "Gremio RS",
    "fora": "Bahia BA",
-   "gc": null,
-   "gf": null,
+   "gc": 0,
+   "gf": 0,
    "xgc": 1.43,
    "xgf": 1.42,
    "p1": 0.372,
@@ -3690,7 +3690,7 @@
    "estadio": "Gremio Arena",
    "cidade": "Porto Alegre",
    "registradoEm": "2026-11-17T11:41:36.813Z",
-   "atualizadoEm": "2026-11-17T11:41:36.813Z"
+   "atualizadoEm": "2026-11-19T13:50:13.438Z"
   },
   {
    "id": "jmwkmh7m3",
@@ -4209,5 +4209,5 @@
    "atualizadoEm": "2026-11-17T11:42:37.754Z"
   }
  ],
- "atualizado": "2026-11-17"
+ "atualizado": "2026-11-19"
 }
