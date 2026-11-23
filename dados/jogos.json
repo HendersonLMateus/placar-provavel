@@ -5927,6 +5927,178 @@
    "cidade": "Chapeco",
    "registradoEm": "2026-11-21T15:23:07.874Z",
    "atualizadoEm": "2026-11-21T15:23:07.874Z"
+  },
+  {
+   "id": "jmwtin8qn",
+   "data": "2026-11-25",
+   "liga": "Serie A",
+   "casa": "Atletico MG",
+   "fora": "Corinthians SP",
+   "gc": null,
+   "gf": null,
+   "xgc": 1.42,
+   "xgf": 0.92,
+   "p1": 0.4817,
+   "px": 0.2821,
+   "p2": 0.2362,
+   "o25": 0.4142,
+   "bts": 0.4616,
+   "hora": "20:00",
+   "rodada": 36,
+   "ctx": {
+    "tc": {
+     "pos": 5,
+     "pts": 57,
+     "j": 36
+    },
+    "tf": {
+     "pos": 16,
+     "pts": 40,
+     "j": 35
+    },
+    "ref": {
+     "lider": 80,
+     "g4": 63,
+     "g6": 54,
+     "z4": 38,
+     "n": 20
+    },
+    "h2h": [
+     {
+      "d": "2026-05-24",
+      "c": "Corinthians SP",
+      "f": "Atletico MG",
+      "gc": 1,
+      "gf": 0
+     },
+     {
+      "d": "2025-10-18",
+      "c": "Corinthians SP",
+      "f": "Atletico MG",
+      "gc": 1,
+      "gf": 0
+     },
+     {
+      "d": "2025-05-25",
+      "c": "Atletico MG",
+      "f": "Corinthians SP",
+      "gc": 0,
+      "gf": 0
+     },
+     {
+      "d": "2024-07-28",
+      "c": "Atletico MG",
+      "f": "Corinthians SP",
+      "gc": 2,
+      "gf": 1
+     },
+     {
+      "d": "2024-04-14",
+      "c": "Corinthians SP",
+      "f": "Atletico MG",
+      "gc": 0,
+      "gf": 0
+     }
+    ],
+    "uc": [
+     {
+      "d": "2026-11-21",
+      "adv": "Boca Juniors",
+      "m": "c",
+      "gp": 0,
+      "gs": 2,
+      "r": "D"
+     },
+     {
+      "d": "2026-11-14",
+      "adv": "Mirassol SP",
+      "m": "f",
+      "gp": 0,
+      "gs": 0,
+      "r": "E"
+     },
+     {
+      "d": "2026-11-07",
+      "adv": "Gremio RS",
+      "m": "c",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-11-05",
+      "adv": "Botafogo RJ",
+      "m": "f",
+      "gp": 0,
+      "gs": 1,
+      "r": "D"
+     },
+     {
+      "d": "2026-11-01",
+      "adv": "Gremio RS",
+      "m": "f",
+      "gp": 0,
+      "gs": 2,
+      "r": "D"
+     }
+    ],
+    "uf": [
+     {
+      "d": "2026-11-19",
+      "adv": "Botafogo RJ",
+      "m": "c",
+      "gp": 4,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-11-05",
+      "adv": "Sao Paulo SP",
+      "m": "f",
+      "gp": 0,
+      "gs": 0,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-30",
+      "adv": "Mirassol SP",
+      "m": "c",
+      "gp": 2,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Vasco da Gama RJ",
+      "m": "f",
+      "gp": 2,
+      "gs": 3,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-20",
+      "adv": "Vitoria BA",
+      "m": "c",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     }
+    ],
+    "cc": [
+     10,
+     5,
+     2
+    ],
+    "cf": [
+     3,
+     6,
+     8
+    ]
+   },
+   "estadio": "Independencia",
+   "cidade": "Belo Horizonte",
+   "registradoEm": "2026-11-23T17:04:41.471Z",
+   "atualizadoEm": "2026-11-23T17:04:41.471Z"
   }
  ],
  "atualizado": "2026-11-23"
