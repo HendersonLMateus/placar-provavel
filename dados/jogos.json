@@ -4214,8 +4214,8 @@
    "liga": "Serie A",
    "casa": "Palmeiras SP",
    "fora": "Flamengo RJ",
-   "gc": null,
-   "gf": null,
+   "gc": 1,
+   "gf": 1,
    "xgc": 1.33,
    "xgf": 1.09,
    "p1": 0.4142,
@@ -4378,7 +4378,7 @@
    "estadio": "Allianz Parque",
    "cidade": "Sao Paulo",
    "registradoEm": "2026-11-21T15:21:13.994Z",
-   "atualizadoEm": "2026-11-21T15:21:13.994Z"
+   "atualizadoEm": "2026-11-23T13:24:14.278Z"
   },
   {
    "id": "jmwqk2zle",
@@ -4386,8 +4386,8 @@
    "liga": "Serie A",
    "casa": "Bahia BA",
    "fora": "Coritiba PR",
-   "gc": null,
-   "gf": null,
+   "gc": 0,
+   "gf": 1,
    "xgc": 1.81,
    "xgf": 1,
    "p1": 0.5582,
@@ -4550,7 +4550,7 @@
    "estadio": "Arena Fonte Nova",
    "cidade": "Salvador",
    "registradoEm": "2026-11-21T15:21:37.202Z",
-   "atualizadoEm": "2026-11-21T15:21:37.202Z"
+   "atualizadoEm": "2026-11-23T13:24:38.445Z"
   },
   {
    "id": "jmwqk37he",
@@ -4558,8 +4558,8 @@
    "liga": "Serie A",
    "casa": "Chapecoense SC",
    "fora": "Cruzeiro MG",
-   "gc": null,
-   "gf": null,
+   "gc": 1,
+   "gf": 2,
    "xgc": 1.32,
    "xgf": 2.54,
    "p1": 0.1785,
@@ -4722,7 +4722,7 @@
    "estadio": "Arena Conda",
    "cidade": "Chapeco",
    "registradoEm": "2026-11-21T15:21:47.426Z",
-   "atualizadoEm": "2026-11-21T15:21:47.426Z"
+   "atualizadoEm": "2026-11-23T13:24:51.101Z"
   },
   {
    "id": "jmwqk3k3u",
@@ -4730,8 +4730,8 @@
    "liga": "Serie A",
    "casa": "Atletico PR",
    "fora": "Remo PA",
-   "gc": null,
-   "gf": null,
+   "gc": 4,
+   "gf": 2,
    "xgc": 2.17,
    "xgf": 0.87,
    "p1": 0.6655,
@@ -4894,7 +4894,7 @@
    "estadio": "Arena da Baixada",
    "cidade": "Curitiba",
    "registradoEm": "2026-11-21T15:22:03.786Z",
-   "atualizadoEm": "2026-11-21T15:22:03.786Z"
+   "atualizadoEm": "2026-11-23T13:25:03.678Z"
   },
   {
    "id": "jmwqk3yrd",
@@ -4902,8 +4902,8 @@
    "liga": "Serie A",
    "casa": "Fluminense RJ",
    "fora": "Mirassol SP",
-   "gc": null,
-   "gf": null,
+   "gc": 1,
+   "gf": 0,
    "xgc": 1.87,
    "xgf": 0.82,
    "p1": 0.6161,
@@ -5066,7 +5066,7 @@
    "estadio": "Maracana",
    "cidade": "Rio de Janeiro",
    "registradoEm": "2026-11-21T15:22:22.777Z",
-   "atualizadoEm": "2026-11-21T15:22:22.777Z"
+   "atualizadoEm": "2026-11-23T13:25:15.357Z"
   },
   {
    "id": "jmwqk45ep",
@@ -5074,8 +5074,8 @@
    "liga": "Serie A",
    "casa": "Bragantino SP",
    "fora": "Vasco da Gama RJ",
-   "gc": null,
-   "gf": null,
+   "gc": 1,
+   "gf": 0,
    "xgc": 1.68,
    "xgf": 1.06,
    "p1": 0.5122,
@@ -5238,7 +5238,7 @@
    "estadio": "Nabi Abi Chedid",
    "cidade": "Braganca Paulista",
    "registradoEm": "2026-11-21T15:22:31.393Z",
-   "atualizadoEm": "2026-11-21T15:22:31.393Z"
+   "atualizadoEm": "2026-11-23T13:25:19.093Z"
   },
   {
    "id": "jmwqk4bnd",
@@ -5929,5 +5929,5 @@
    "atualizadoEm": "2026-11-21T15:23:07.874Z"
   }
  ],
- "atualizado": "2026-11-21"
+ "atualizado": "2026-11-23"
 }
