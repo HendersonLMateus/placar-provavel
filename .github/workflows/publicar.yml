@@ -12,14 +12,12 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
-  publicar:
+  # 1) Gera as páginas e envia o pacote do site
+  gerar:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -31,5 +29,16 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+
+  # 2) Publica num job separado: evita o erro intermitente
+  #    "No artifacts named github-pages were found" quando o deploy roda
+  #    logo depois do upload, no mesmo job.
+  publicar:
+    needs: gerar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
       - id: deploy
         uses: actions/deploy-pages@v4
