@@ -5246,8 +5246,8 @@
    "liga": "Serie A",
    "casa": "Internacional RS",
    "fora": "Vitoria BA",
-   "gc": null,
-   "gf": null,
+   "gc": 2,
+   "gf": 5,
    "xgc": 1.59,
    "xgf": 0.74,
    "p1": 0.5703,
@@ -5410,7 +5410,7 @@
    "estadio": "Beira-Rio",
    "cidade": "Porto Alegre",
    "registradoEm": "2026-11-21T15:22:39.481Z",
-   "atualizadoEm": "2026-11-21T15:22:39.481Z"
+   "atualizadoEm": "2026-11-24T13:06:57.746Z"
   },
   {
    "id": "jmwqk4j82",
@@ -5418,8 +5418,8 @@
    "liga": "Serie A",
    "casa": "Botafogo RJ",
    "fora": "Sao Paulo SP",
-   "gc": null,
-   "gf": null,
+   "gc": 1,
+   "gf": 1,
    "xgc": 1.45,
    "xgf": 1.05,
    "p1": 0.4557,
@@ -5582,7 +5582,7 @@
    "estadio": "Estadio Olimpico",
    "cidade": "Rio de Janeiro",
    "registradoEm": "2026-11-21T15:22:49.298Z",
-   "atualizadoEm": "2026-11-21T15:22:49.298Z"
+   "atualizadoEm": "2026-11-24T13:07:22.232Z"
   },
   {
    "id": "jmwqk4p0x",
@@ -5590,8 +5590,8 @@
    "liga": "Serie A",
    "casa": "Santos SP",
    "fora": "Gremio RS",
-   "gc": null,
-   "gf": null,
+   "gc": 0,
+   "gf": 2,
    "xgc": 1.53,
    "xgf": 0.85,
    "p1": 0.5273,
@@ -5754,7 +5754,7 @@
    "estadio": "Vila Belmiro",
    "cidade": "Santos",
    "registradoEm": "2026-11-21T15:22:56.817Z",
-   "atualizadoEm": "2026-11-21T15:22:56.817Z"
+   "atualizadoEm": "2026-11-24T13:07:39.529Z"
   },
   {
    "id": "jmwqk4xk2",
@@ -6099,7 +6099,179 @@
    "cidade": "Belo Horizonte",
    "registradoEm": "2026-11-23T17:04:41.471Z",
    "atualizadoEm": "2026-11-23T17:04:41.471Z"
+  },
+  {
+   "id": "jmwupoigg",
+   "data": "2026-11-26",
+   "liga": "Serie A",
+   "casa": "Sao Paulo SP",
+   "fora": "Remo PA",
+   "gc": null,
+   "gf": null,
+   "xgc": 1.8,
+   "xgf": 0.74,
+   "p1": 0.6218,
+   "px": 0.2346,
+   "p2": 0.1435,
+   "o25": 0.4682,
+   "bts": 0.4431,
+   "hora": "20:00",
+   "rodada": 37,
+   "ctx": {
+    "tc": {
+     "pos": 11,
+     "pts": 45,
+     "j": 36
+    },
+    "tf": {
+     "pos": 19,
+     "pts": 32,
+     "j": 36
+    },
+    "ref": {
+     "lider": 80,
+     "g4": 63,
+     "g6": 54,
+     "z4": 40,
+     "n": 20
+    },
+    "h2h": [
+     {
+      "d": "2026-06-01",
+      "c": "Remo PA",
+      "f": "Sao Paulo SP",
+      "gc": 1,
+      "gf": 0
+     },
+     {
+      "d": "2026-11-23",
+      "c": "Botafogo RJ",
+      "f": "Sao Paulo SP",
+      "gc": 1,
+      "gf": 1
+     },
+     {
+      "d": "2026-11-20",
+      "c": "Sao Paulo SP",
+      "f": "Fluminense RJ",
+      "gc": 0,
+      "gf": 1
+     },
+     {
+      "d": "2026-11-05",
+      "c": "Sao Paulo SP",
+      "f": "Corinthians SP",
+      "gc": 0,
+      "gf": 0
+     },
+     {
+      "d": "2026-10-29",
+      "c": "Bahia BA",
+      "f": "Sao Paulo SP",
+      "gc": 3,
+      "gf": 2
+     }
+    ],
+    "uc": [
+     {
+      "d": "2026-11-23",
+      "adv": "Botafogo RJ",
+      "m": "f",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     },
+     {
+      "d": "2026-11-20",
+      "adv": "Fluminense RJ",
+      "m": "c",
+      "gp": 0,
+      "gs": 1,
+      "r": "D"
+     },
+     {
+      "d": "2026-11-05",
+      "adv": "Corinthians SP",
+      "m": "c",
+      "gp": 0,
+      "gs": 0,
+      "r": "E"
+     },
+     {
+      "d": "2026-10-29",
+      "adv": "Bahia BA",
+      "m": "f",
+      "gp": 2,
+      "gs": 3,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Mirassol SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 1,
+      "r": "E"
+     }
+    ],
+    "uf": [
+     {
+      "d": "2026-11-22",
+      "adv": "Atletico PR",
+      "m": "f",
+      "gp": 2,
+      "gs": 4,
+      "r": "D"
+     },
+     {
+      "d": "2026-11-18",
+      "adv": "Chapecoense SC",
+      "m": "c",
+      "gp": 2,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-11-05",
+      "adv": "Palmeiras SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 6,
+      "r": "D"
+     },
+     {
+      "d": "2026-10-29",
+      "adv": "Botafogo RJ",
+      "m": "c",
+      "gp": 2,
+      "gs": 1,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Cruzeiro MG",
+      "m": "f",
+      "gp": 0,
+      "gs": 1,
+      "r": "D"
+     }
+    ],
+    "cc": [
+     10,
+     4,
+     4
+    ],
+    "cf": [
+     2,
+     4,
+     12
+    ]
+   },
+   "estadio": "Morumbi",
+   "cidade": "Sao Paulo",
+   "registradoEm": "2026-11-24T13:09:24.208Z",
+   "atualizadoEm": "2026-11-24T13:09:24.208Z"
   }
  ],
- "atualizado": "2026-11-23"
+ "atualizado": "2026-11-24"
 }
