@@ -5762,8 +5762,8 @@
    "liga": "Serie A",
    "casa": "Chapecoense SC",
    "fora": "Palmeiras SP",
-   "gc": null,
-   "gf": null,
+   "gc": 3,
+   "gf": 0,
    "xgc": 0.62,
    "xgf": 2.68,
    "p1": 0.0592,
@@ -5926,7 +5926,7 @@
    "estadio": "Arena Conda",
    "cidade": "Chapeco",
    "registradoEm": "2026-11-21T15:23:07.874Z",
-   "atualizadoEm": "2026-11-21T15:23:07.874Z"
+   "atualizadoEm": "2026-11-25T11:43:01.146Z"
   },
   {
    "id": "jmwtin8qn",
@@ -6271,7 +6271,179 @@
    "cidade": "Sao Paulo",
    "registradoEm": "2026-11-24T13:09:24.208Z",
    "atualizadoEm": "2026-11-24T13:09:24.208Z"
+  },
+  {
+   "id": "jmww24m1e",
+   "data": "2026-11-27",
+   "liga": "Serie A",
+   "casa": "Fluminense RJ",
+   "fora": "Cruzeiro MG",
+   "gc": null,
+   "gf": null,
+   "xgc": 1.95,
+   "xgf": 1.24,
+   "p1": 0.535,
+   "px": 0.2297,
+   "p2": 0.2353,
+   "o25": 0.6174,
+   "bts": 0.6137,
+   "hora": "20:00",
+   "rodada": 37,
+   "ctx": {
+    "tc": {
+     "pos": 4,
+     "pts": 63,
+     "j": 36
+    },
+    "tf": {
+     "pos": 3,
+     "pts": 66,
+     "j": 36
+    },
+    "ref": {
+     "lider": 80,
+     "g4": 63,
+     "g6": 54,
+     "z4": 40,
+     "n": 20
+    },
+    "h2h": [
+     {
+      "d": "2026-06-01",
+      "c": "Cruzeiro MG",
+      "f": "Fluminense RJ",
+      "gc": 1,
+      "gf": 1
+     },
+     {
+      "d": "2025-11-09",
+      "c": "Cruzeiro MG",
+      "f": "Fluminense RJ",
+      "gc": 0,
+      "gf": 0
+     },
+     {
+      "d": "2025-07-17",
+      "c": "Fluminense RJ",
+      "f": "Cruzeiro MG",
+      "gc": 0,
+      "gf": 2
+     },
+     {
+      "d": "2024-10-04",
+      "c": "Fluminense RJ",
+      "f": "Cruzeiro MG",
+      "gc": 1,
+      "gf": 0
+     },
+     {
+      "d": "2024-06-20",
+      "c": "Cruzeiro MG",
+      "f": "Fluminense RJ",
+      "gc": 2,
+      "gf": 0
+     }
+    ],
+    "uc": [
+     {
+      "d": "2026-11-22",
+      "adv": "Mirassol SP",
+      "m": "c",
+      "gp": 1,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-11-20",
+      "adv": "Sao Paulo SP",
+      "m": "f",
+      "gp": 1,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-11-06",
+      "adv": "Vitoria BA",
+      "m": "f",
+      "gp": 3,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-28",
+      "adv": "Internacional RS",
+      "m": "c",
+      "gp": 2,
+      "gs": 1,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Chapecoense SC",
+      "m": "f",
+      "gp": 1,
+      "gs": 2,
+      "r": "D"
+     }
+    ],
+    "uf": [
+     {
+      "d": "2026-11-22",
+      "adv": "Chapecoense SC",
+      "m": "f",
+      "gp": 2,
+      "gs": 1,
+      "r": "V"
+     },
+     {
+      "d": "2026-11-18",
+      "adv": "Palmeiras SP",
+      "m": "c",
+      "gp": 2,
+      "gs": 1,
+      "r": "V"
+     },
+     {
+      "d": "2026-11-06",
+      "adv": "Bahia BA",
+      "m": "c",
+      "gp": 3,
+      "gs": 2,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-29",
+      "adv": "Atletico MG",
+      "m": "f",
+      "gp": 1,
+      "gs": 0,
+      "r": "V"
+     },
+     {
+      "d": "2026-10-24",
+      "adv": "Remo PA",
+      "m": "c",
+      "gp": 1,
+      "gs": 0,
+      "r": "V"
+     }
+    ],
+    "cc": [
+     13,
+     3,
+     2
+    ],
+    "cf": [
+     9,
+     2,
+     7
+    ]
+   },
+   "estadio": "Maracana",
+   "cidade": "Rio de Janeiro",
+   "registradoEm": "2026-11-25T11:45:36.914Z",
+   "atualizadoEm": "2026-11-25T11:45:36.914Z"
   }
  ],
- "atualizado": "2026-11-24"
+ "atualizado": "2026-11-25"
 }
